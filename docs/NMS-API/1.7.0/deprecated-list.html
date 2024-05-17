@@ -65,11 +65,11 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/block/BlockApi.html#randomlyTick(org.bukkit.block.Block)">com.shanebeestudios.nms.api.world.block.BlockApi.randomlyTick<wbr>(Block)</a></div>
 <div class="col-last even-row-color">
-<div class="block">see Paper's new method <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/block/Block.html#randomTick()" title="class or interface in org.bukkit.block" class="external-link"><code>Block.randomTick()</code></a></div>
+<div class="block">see Paper's new method <code>Block.randomTick()</code></div>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/block/McBlock.html#isRandomlyTicking(org.bukkit.block.Block)">com.shanebeestudios.nms.api.world.block.McBlock.isRandomlyTicking<wbr>(Block)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">See Paper's new method <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/block/data/BlockData.html#isRandomlyTicked()" title="class or interface in org.bukkit.block.data" class="external-link"><code>BlockData.isRandomlyTicked()</code></a></div>
+<div class="block">See Paper's new method <code>BlockData.isRandomlyTicked()</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/BlockApi.html" title="class in com.shanebeestudios.nms.api.world">com.shanebeestudios.nms.api.world.BlockApi</a></div>
 <div class="col-last even-row-color">
@@ -77,30 +77,50 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/ChunkApi.html#isTicking(org.bukkit.Chunk)">com.shanebeestudios.nms.api.world.ChunkApi.isTicking<wbr>(Chunk)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Instead use <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/Chunk.html#getLoadLevel()" title="class or interface in org.bukkit" class="external-link"><code>Chunk.getLoadLevel()</code></a></div>
+<div class="block">Instead use <code>Chunk.getLoadLevel()</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/ChunkApi.html#isTickingAtLocation(org.bukkit.Location)">com.shanebeestudios.nms.api.world.ChunkApi.isTickingAtLocation<wbr>(Location)</a></div>
 <div class="col-last even-row-color">
-<div class="block">Instead use <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/Chunk.html#getLoadLevel()" title="class or interface in org.bukkit" class="external-link"><code>Chunk.getLoadLevel()</code></a></div>
+<div class="block">Instead use <code>Chunk.getLoadLevel()</code></div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getDamage()">com.shanebeestudios.nms.api.world.item.McItem.getDamage()</a></div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#canAlwaysEat()">com.shanebeestudios.nms.api.world.item.McItem.canAlwaysEat()</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now <code>FoodComponent.canAlwaysEat()</code></div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getDamage()">com.shanebeestudios.nms.api.world.item.McItem.getDamage()</a></div>
+<div class="col-last even-row-color">
 <div class="block">No longer used</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isFastFood()">com.shanebeestudios.nms.api.world.item.McItem.isFastFood()</a></div>
-<div class="col-last even-row-color">
-<div class="block">No longer used in Minecraft</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getNutrition()">com.shanebeestudios.nms.api.world.item.McItem.getNutrition()</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now, <code>FoodComponent.getNutrition()</code></div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isMeat()">com.shanebeestudios.nms.api.world.item.McItem.isMeat()</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getRarity(net.minecraft.world.item.ItemStack)">com.shanebeestudios.nms.api.world.item.McItem.getRarity<wbr>(ItemStack)</a></div>
+<div class="col-last even-row-color">
+<div class="block">Can be done in Bukkit now <code>ItemMeta.getRarity()</code></div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getSaturationModifier()">com.shanebeestudios.nms.api.world.item.McItem.getSaturationModifier()</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now, <code>FoodComponent.getSaturation()</code></div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isEdible()">com.shanebeestudios.nms.api.world.item.McItem.isEdible()</a></div>
+<div class="col-last even-row-color">
+<div class="block">Can be done in Bukkit now <code>ItemMeta.hasFood()</code></div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isFastFood()">com.shanebeestudios.nms.api.world.item.McItem.isFastFood()</a></div>
 <div class="col-last odd-row-color">
 <div class="block">No longer used in Minecraft</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McTier.html#getLevel()">com.shanebeestudios.nms.api.world.item.McTier.getLevel()</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isMeat()">com.shanebeestudios.nms.api.world.item.McItem.isMeat()</a></div>
 <div class="col-last even-row-color">
+<div class="block">No longer used in Minecraft</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McTier.html#getLevel()">com.shanebeestudios.nms.api.world.item.McTier.getLevel()</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Minecraft removed the tier level</div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/ItemApi.html" title="class in com.shanebeestudios.nms.api.world">com.shanebeestudios.nms.api.world.ItemApi</a></div>
-<div class="col-last odd-row-color">
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/ItemApi.html" title="class in com.shanebeestudios.nms.api.world">com.shanebeestudios.nms.api.world.ItemApi</a></div>
+<div class="col-last even-row-color">
 <div class="block">Use <a href="com/shanebeestudios/nms/api/world/item/ItemApi.html" title="class in com.shanebeestudios.nms.api.world.item"><code>ItemApi</code></a> instead of this class</div>
 </div>
 </div>
@@ -139,54 +159,74 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/block/BlockApi.html#randomlyTick(org.bukkit.block.Block)">com.shanebeestudios.nms.api.world.block.BlockApi.randomlyTick<wbr>(Block)</a></div>
 <div class="col-last even-row-color">
-<div class="block">see Paper's new method <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/block/Block.html#randomTick()" title="class or interface in org.bukkit.block" class="external-link"><code>Block.randomTick()</code></a></div>
+<div class="block">see Paper's new method <code>Block.randomTick()</code></div>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/block/McBlock.html#isRandomlyTicking(org.bukkit.block.Block)">com.shanebeestudios.nms.api.world.block.McBlock.isRandomlyTicking<wbr>(Block)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">See Paper's new method <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/block/data/BlockData.html#isRandomlyTicked()" title="class or interface in org.bukkit.block.data" class="external-link"><code>BlockData.isRandomlyTicked()</code></a></div>
+<div class="block">See Paper's new method <code>BlockData.isRandomlyTicked()</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/ChunkApi.html#isTicking(org.bukkit.Chunk)">com.shanebeestudios.nms.api.world.ChunkApi.isTicking<wbr>(Chunk)</a></div>
 <div class="col-last even-row-color">
-<div class="block">Instead use <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/Chunk.html#getLoadLevel()" title="class or interface in org.bukkit" class="external-link"><code>Chunk.getLoadLevel()</code></a></div>
+<div class="block">Instead use <code>Chunk.getLoadLevel()</code></div>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/ChunkApi.html#isTickingAtLocation(org.bukkit.Location)">com.shanebeestudios.nms.api.world.ChunkApi.isTickingAtLocation<wbr>(Location)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">Instead use <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/Chunk.html#getLoadLevel()" title="class or interface in org.bukkit" class="external-link"><code>Chunk.getLoadLevel()</code></a></div>
+<div class="block">Instead use <code>Chunk.getLoadLevel()</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/entity/EntityApi.html#damage(org.bukkit.entity.Entity,float,org.bukkit.NamespacedKey)">com.shanebeestudios.nms.api.world.entity.EntityApi.damage<wbr>(Entity, float, NamespacedKey)</a></div>
 <div class="col-last even-row-color">
-<div class="block">This is now in Bukkit, see <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/damage/DamageSource.html" title="class or interface in org.bukkit.damage" class="external-link"><code>DamageSource</code></a></div>
+<div class="block">This is now in Bukkit, see <code>DamageSource</code></div>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/entity/EntityApi.html#damage(org.bukkit.entity.Entity,float,org.bukkit.NamespacedKey,org.bukkit.util.Vector)">com.shanebeestudios.nms.api.world.entity.EntityApi.damage<wbr>(Entity, float, NamespacedKey, Vector)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">This is now in Bukkit, see <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/damage/DamageSource.html" title="class or interface in org.bukkit.damage" class="external-link"><code>DamageSource</code></a></div>
+<div class="block">This is now in Bukkit, see <code>DamageSource</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/entity/EntityApi.html#damage(org.bukkit.entity.Entity,float,org.bukkit.NamespacedKey,org.bukkit.entity.Entity)">com.shanebeestudios.nms.api.world.entity.EntityApi.damage<wbr>(Entity, float, NamespacedKey, Entity)</a></div>
 <div class="col-last even-row-color">
-<div class="block">This is now in Bukkit, see <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/damage/DamageSource.html" title="class or interface in org.bukkit.damage" class="external-link"><code>DamageSource</code></a></div>
+<div class="block">This is now in Bukkit, see <code>DamageSource</code></div>
 </div>
 <div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/entity/EntityApi.html#damage(org.bukkit.entity.Entity,float,org.bukkit.NamespacedKey,org.bukkit.entity.Entity,org.bukkit.entity.Entity)">com.shanebeestudios.nms.api.world.entity.EntityApi.damage<wbr>(Entity, float, NamespacedKey, Entity, Entity)</a></div>
 <div class="col-last odd-row-color">
-<div class="block">This is now in Bukkit, see <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/damage/DamageSource.html" title="class or interface in org.bukkit.damage" class="external-link"><code>DamageSource</code></a></div>
+<div class="block">This is now in Bukkit, see <code>DamageSource</code></div>
 </div>
 <div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/entity/EntityApi.html#getDamageTypeKeys()">com.shanebeestudios.nms.api.world.entity.EntityApi.getDamageTypeKeys()</a></div>
 <div class="col-last even-row-color">
-<div class="block">This is now in Bukkit, see <a href="https://jd.papermc.io/paper/1.20.6/org/bukkit/damage/DamageType.html" title="class or interface in org.bukkit.damage" class="external-link"><code>DamageType</code></a></div>
+<div class="block">This is now in Bukkit, see <code>DamageType</code></div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getDamage()">com.shanebeestudios.nms.api.world.item.McItem.getDamage()</a></div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#canAlwaysEat()">com.shanebeestudios.nms.api.world.item.McItem.canAlwaysEat()</a></div>
 <div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now <code>FoodComponent.canAlwaysEat()</code></div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getDamage()">com.shanebeestudios.nms.api.world.item.McItem.getDamage()</a></div>
+<div class="col-last even-row-color">
 <div class="block">No longer used</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isFastFood()">com.shanebeestudios.nms.api.world.item.McItem.isFastFood()</a></div>
-<div class="col-last even-row-color">
-<div class="block">No longer used in Minecraft</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getNutrition()">com.shanebeestudios.nms.api.world.item.McItem.getNutrition()</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now, <code>FoodComponent.getNutrition()</code></div>
 </div>
-<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isMeat()">com.shanebeestudios.nms.api.world.item.McItem.isMeat()</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getRarity(net.minecraft.world.item.ItemStack)">com.shanebeestudios.nms.api.world.item.McItem.getRarity<wbr>(ItemStack)</a></div>
+<div class="col-last even-row-color">
+<div class="block">Can be done in Bukkit now <code>ItemMeta.getRarity()</code></div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#getSaturationModifier()">com.shanebeestudios.nms.api.world.item.McItem.getSaturationModifier()</a></div>
+<div class="col-last odd-row-color">
+<div class="block">Can be done in Bukkit now, <code>FoodComponent.getSaturation()</code></div>
+</div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isEdible()">com.shanebeestudios.nms.api.world.item.McItem.isEdible()</a></div>
+<div class="col-last even-row-color">
+<div class="block">Can be done in Bukkit now <code>ItemMeta.hasFood()</code></div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isFastFood()">com.shanebeestudios.nms.api.world.item.McItem.isFastFood()</a></div>
 <div class="col-last odd-row-color">
 <div class="block">No longer used in Minecraft</div>
 </div>
-<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McTier.html#getLevel()">com.shanebeestudios.nms.api.world.item.McTier.getLevel()</a></div>
+<div class="col-summary-item-name even-row-color"><a href="com/shanebeestudios/nms/api/world/item/McItem.html#isMeat()">com.shanebeestudios.nms.api.world.item.McItem.isMeat()</a></div>
 <div class="col-last even-row-color">
+<div class="block">No longer used in Minecraft</div>
+</div>
+<div class="col-summary-item-name odd-row-color"><a href="com/shanebeestudios/nms/api/world/item/McTier.html#getLevel()">com.shanebeestudios.nms.api.world.item.McTier.getLevel()</a></div>
+<div class="col-last odd-row-color">
 <div class="block">Minecraft removed the tier level</div>
 </div>
 </div>
