@@ -1,6 +1,7 @@
 com.shanebeestudios.nms.api.server
 com.shanebeestudios.nms.api.util
 com.shanebeestudios.nms.api.world
+com.shanebeestudios.nms.api.world.biome
 com.shanebeestudios.nms.api.world.block
 com.shanebeestudios.nms.api.world.entity
 com.shanebeestudios.nms.api.world.item
