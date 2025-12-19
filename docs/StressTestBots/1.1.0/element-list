@@ -1,0 +1,6 @@
+com.shanebeestudios.stress
+com.shanebeestudios.stress.api.bot
+com.shanebeestudios.stress.api.event
+com.shanebeestudios.stress.api.generator
+com.shanebeestudios.stress.api.timer
+com.shanebeestudios.stress.api.util
