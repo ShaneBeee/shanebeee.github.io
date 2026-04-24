@@ -82,8 +82,11 @@ loadScripts(document, 'script');</script>
 <li><a href="#newEnumType(java.lang.Class,com.github.shanebeee.skr.EnumWrapper,java.lang.String)" tabindex="0">newEnumType(Class, EnumWrapper, String)</a></li>
 <li><a href="#newEnumType(java.lang.Class,com.github.shanebeee.skr.EnumWrapper,java.lang.String,java.lang.String,java.lang.String)" tabindex="0">newEnumType(Class, EnumWrapper, String, String, String)</a></li>
 <li><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String)" tabindex="0">newRegistryType(Registry, Class, String)</a></li>
+<li><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String)" tabindex="0">newRegistryType(RegistryKey, Class, String)</a></li>
 <li><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,boolean,java.lang.String)" tabindex="0">newRegistryType(Registry, Class, boolean, String)</a></li>
+<li><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,boolean,java.lang.String)" tabindex="0">newRegistryType(RegistryKey, Class, boolean, String)</a></li>
 <li><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)" tabindex="0">newRegistryType(Registry, Class, String, String, String)</a></li>
+<li><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)" tabindex="0">newRegistryType(RegistryKey, Class, String, String, String)</a></li>
 <li><a href="#newEffect(java.lang.Class,java.lang.String...)" tabindex="0">newEffect(Class, String...)</a></li>
 <li><a href="#newSection(java.lang.Class,java.lang.String...)" tabindex="0">newSection(Class, String...)</a></li>
 <li><a href="#newSection(java.lang.Class,org.skriptlang.skript.lang.entry.EntryValidator,java.lang.String...)" tabindex="0">newSection(Class, EntryValidator, String...)</a></li>
@@ -417,7 +420,7 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a new ExpressionRegistrar for a custom <code>SimplePropertyExpression</code> with patterns.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,boolean,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,boolean,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  boolean&nbsp;createUsage,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</code></div>
@@ -425,14 +428,14 @@ loadScripts(document, 'script');</script>
 <div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a new RegistryTypeRegistrar.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix,
@@ -440,43 +443,67 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.SectionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.SectionRegistrar</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSection(java.lang.Class,java.lang.String...)" class="member-name-link">newSection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Section.html" title="class or interface in ch.njol.skript.lang" class="external-link">Section</a>&gt;&nbsp;section,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,boolean,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ boolean&nbsp;createUsage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a new SectionRegistrar for a custom section with patterns.</div>
+<div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.SectionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.SectionRegistrar</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSection(java.lang.Class,org.skriptlang.skript.lang.entry.EntryValidator,java.lang.String...)" class="member-name-link">newSection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Section.html" title="class or interface in ch.njol.skript.lang" class="external-link">Section</a>&gt;&nbsp;section,
- <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/entry/EntryValidator.html" title="class or interface in org.skriptlang.skript.lang.entry" class="external-link">EntryValidator</a>&nbsp;validator,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a new SectionRegistrar for a custom section with patterns and validator.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T, E extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Expression.html" title="class or interface in ch.njol.skript.lang" class="external-link">Expression</a>&lt;T&gt;&gt;<br><a href="Registration.ExpressionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.ExpressionRegistrar</a><wbr>&lt;T,<wbr>E&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSimpleExpression(java.lang.Class,java.lang.Class,java.lang.String...)" class="member-name-link">newSimpleExpression</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;expressionClass,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;returnType,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a new ExpressionRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/util/SimpleExpression.html" title="class or interface in ch.njol.skript.lang.util" class="external-link"><code>SimpleExpression</code></a> with patterns.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.StructureRegistrar.html" title="class in com.github.shanebeee.skr">Registration.StructureRegistrar</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newStructure(java.lang.Class,java.lang.String...)" class="member-name-link">newStructure</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link">Structure</a>&gt;&nbsp;structureClass,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a new StructureRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link"><code>Structure</code></a> with patterns.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.StructureRegistrar.html" title="class in com.github.shanebeee.skr">Registration.StructureRegistrar</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newStructure(java.lang.Class,org.skriptlang.skript.lang.entry.EntryValidator,java.lang.String...)" class="member-name-link">newStructure</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link">Structure</a>&gt;&nbsp;structureClass,
- <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/entry/EntryValidator.html" title="class or interface in org.skriptlang.skript.lang.entry" class="external-link">EntryValidator</a>&nbsp;entryValidator,
- <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Create a new StructureRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link"><code>Structure</code></a> with patterns and validator.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a><wbr>&lt;T&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newType(java.lang.Class,java.lang.String)" class="member-name-link">newType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
  <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new RegistryTypeRegistrar.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;<br><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)" class="member-name-link">newRegistryType</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link">Registry</a>&lt;T&gt;&nbsp;registry,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;suffix)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.SectionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.SectionRegistrar</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSection(java.lang.Class,java.lang.String...)" class="member-name-link">newSection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Section.html" title="class or interface in ch.njol.skript.lang" class="external-link">Section</a>&gt;&nbsp;section,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new SectionRegistrar for a custom section with patterns.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.SectionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.SectionRegistrar</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSection(java.lang.Class,org.skriptlang.skript.lang.entry.EntryValidator,java.lang.String...)" class="member-name-link">newSection</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Section.html" title="class or interface in ch.njol.skript.lang" class="external-link">Section</a>&gt;&nbsp;section,
+ <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/entry/EntryValidator.html" title="class or interface in org.skriptlang.skript.lang.entry" class="external-link">EntryValidator</a>&nbsp;validator,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new SectionRegistrar for a custom section with patterns and validator.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T, E extends <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Expression.html" title="class or interface in ch.njol.skript.lang" class="external-link">Expression</a>&lt;T&gt;&gt;<br><a href="Registration.ExpressionRegistrar.html" title="class in com.github.shanebeee.skr">Registration.ExpressionRegistrar</a><wbr>&lt;T,<wbr>E&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newSimpleExpression(java.lang.Class,java.lang.Class,java.lang.String...)" class="member-name-link">newSimpleExpression</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;E&gt;&nbsp;expressionClass,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;returnType,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new ExpressionRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/util/SimpleExpression.html" title="class or interface in ch.njol.skript.lang.util" class="external-link"><code>SimpleExpression</code></a> with patterns.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.StructureRegistrar.html" title="class in com.github.shanebeee.skr">Registration.StructureRegistrar</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newStructure(java.lang.Class,java.lang.String...)" class="member-name-link">newStructure</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link">Structure</a>&gt;&nbsp;structureClass,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new StructureRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link"><code>Structure</code></a> with patterns.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.StructureRegistrar.html" title="class in com.github.shanebeee.skr">Registration.StructureRegistrar</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newStructure(java.lang.Class,org.skriptlang.skript.lang.entry.EntryValidator,java.lang.String...)" class="member-name-link">newStructure</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;? extends <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link">Structure</a>&gt;&nbsp;structureClass,
+ <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/entry/EntryValidator.html" title="class or interface in org.skriptlang.skript.lang.entry" class="external-link">EntryValidator</a>&nbsp;entryValidator,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;patterns)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Create a new StructureRegistrar for a custom <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/structure/Structure.html" title="class or interface in org.skriptlang.skript.lang.structure" class="external-link"><code>Structure</code></a> with patterns and validator.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>&lt;T&gt;&nbsp;<a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a><wbr>&lt;T&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#newType(java.lang.Class,java.lang.String)" class="member-name-link">newType</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get a new <a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr"><code>TypeRegistrar</code></a> for a custom <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/ClassInfo.html" title="class or interface in ch.njol.skript.classes" class="external-link"><code>ClassInfo</code></a>.</div>
 </div>
 </div>
@@ -847,6 +874,28 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String)">
+<h3>newRegistryType</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</span>
+<span class="return-type"><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a>&lt;T&gt;</span>&nbsp;<span class="element-name">newRegistryType</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</span></div>
+<div class="block">Create a new RegistryTypeRegistrar.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String)-type-param-T"><code>T</code> - Type of class to register.</span></dd>
+<dt>Parameters:</dt>
+<dd><code>registryKey</code> - Key of registry to register</dd>
+<dd><code>type</code> - Class to register</dd>
+<dd><code>codename</code> - Codename of new type</dd>
+<dt>Returns:</dt>
+<dd>New RegistryTypeRegistrar (Don't forget to register it!)</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
 <section class="detail" id="newRegistryType(org.bukkit.Registry,java.lang.Class,boolean,java.lang.String)">
 <h3>newRegistryType</h3>
 <div class="horizontal-scroll">
@@ -861,6 +910,30 @@ loadScripts(document, 'script');</script>
 <dd><span id="newRegistryType(org.bukkit.Registry,java.lang.Class,boolean,java.lang.String)-type-param-T"><code>T</code> - Type of class to register.</span></dd>
 <dt>Parameters:</dt>
 <dd><code>registry</code> - Registry instance</dd>
+<dd><code>type</code> - Class to register</dd>
+<dd><code>createUsage</code> - Whether to create usage for the registry type</dd>
+<dd><code>codename</code> - Codename of new type</dd>
+<dt>Returns:</dt>
+<dd>New RegistryTypeRegistrar (Don't forget to register it!)</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,boolean,java.lang.String)">
+<h3>newRegistryType</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</span>
+<span class="return-type"><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a>&lt;T&gt;</span>&nbsp;<span class="element-name">newRegistryType</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ boolean&nbsp;createUsage,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename)</span></div>
+<div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,boolean,java.lang.String)-type-param-T"><code>T</code> - Type of class to register.</span></dd>
+<dt>Parameters:</dt>
+<dd><code>registryKey</code> - Key of registry to register</dd>
 <dd><code>type</code> - Class to register</dd>
 <dd><code>createUsage</code> - Whether to create usage for the registry type</dd>
 <dd><code>codename</code> - Codename of new type</dd>
@@ -886,6 +959,32 @@ loadScripts(document, 'script');</script>
 <dd><span id="newRegistryType(org.bukkit.Registry,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)-type-param-T"><code>T</code> - Type of class to register.</span></dd>
 <dt>Parameters:</dt>
 <dd><code>registry</code> - Registry instance</dd>
+<dd><code>type</code> - Class to register</dd>
+<dd><code>codename</code> - Codename of new type</dd>
+<dd><code>prefix</code> - Custom prefix for registry type names</dd>
+<dd><code>suffix</code> - Custom suffix for registry type names</dd>
+<dt>Returns:</dt>
+<dd>New RegistryTypeRegistrar (Don't forget to register it!)</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)">
+<h3>newRegistryType</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="type-parameters">&lt;T extends <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>&gt;</span>
+<span class="return-type"><a href="Registration.RegistryTypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.RegistryTypeRegistrar</a>&lt;T&gt;</span>&nbsp;<span class="element-name">newRegistryType</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;T&gt;&nbsp;registryKey,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;codename,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;prefix,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;suffix)</span></div>
+<div class="block">Create a new RegistryTypeRegistrar with a custom prefix and suffix.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="newRegistryType(io.papermc.paper.registry.RegistryKey,java.lang.Class,java.lang.String,java.lang.String,java.lang.String)-type-param-T"><code>T</code> - Type of class to register.</span></dd>
+<dt>Parameters:</dt>
+<dd><code>registryKey</code> - Key of registry to register</dd>
 <dd><code>type</code> - Class to register</dd>
 <dd><code>codename</code> - Codename of new type</dd>
 <dd><code>prefix</code> - Custom prefix for registry type names</dd>
