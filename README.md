@@ -4,7 +4,7 @@ Welcome to my stunning looking website!
 # Repos
 Check out my collection of repos:    
 [**ShaneBeee**](https://github.com/ShaneBeee)    
-[**ShaneBeeStudios**](https://github.com/ShaneBeeStudios) 
+[**ShaneBeeStudios**](https://github.com/ShaneBeeStudios)    
 [**SkriptDev**](https://github.com/SkriptDev/)
 
 # JavaDocs
