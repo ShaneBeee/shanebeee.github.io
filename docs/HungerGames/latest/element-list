@@ -1,0 +1,17 @@
+com.shanebeestudios.hg.api.command
+com.shanebeestudios.hg.api.data
+com.shanebeestudios.hg.api.events
+com.shanebeestudios.hg.api.game
+com.shanebeestudios.hg.api.gui
+com.shanebeestudios.hg.api.parsers
+com.shanebeestudios.hg.api.region
+com.shanebeestudios.hg.api.region.scheduler
+com.shanebeestudios.hg.api.region.scheduler.task
+com.shanebeestudios.hg.api.registry
+com.shanebeestudios.hg.api.status
+com.shanebeestudios.hg.api.util
+com.shanebeestudios.hg.plugin
+com.shanebeestudios.hg.plugin.configs
+com.shanebeestudios.hg.plugin.managers
+com.shanebeestudios.hg.plugin.permission
+com.shanebeestudios.hg.plugin.tasks
