@@ -51,7 +51,8 @@ loadScripts(document, 'script');</script>
 <h1 title="All Classes and Interfaces" class="title">All Classes and Interfaces</h1>
 </div>
 <div id="all-classes-table">
-<div class="caption"><span>Classes</span></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="all-classes-table-tab0" role="tab" aria-selected="true" aria-controls="all-classes-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="all-classes-table-tab1" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab1', 2)" class="table-tab">Interfaces</button><button id="all-classes-table-tab2" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab2', 2)" class="table-tab">Classes</button></div>
+<div id="all-classes-table.tabpanel" role="tabpanel" aria-labelledby="all-classes-table-tab0">
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
 <div class="table-header col-last">Description</div>
@@ -63,25 +64,58 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Wrapper class for wrapping Enums to be used in Skript</div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/scheduler/FoliaScheduler.html" title="class in com.github.shanebeee.skr.scheduling.scheduler">FoliaScheduler</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">A <a href="com/github/shanebeee/skr/scheduling/scheduler/Scheduler.html" title="interface in com.github.shanebeee.skr.scheduling.scheduler"><code>Scheduler</code></a> based on Folia/Paper regionalized schedulers</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/scheduler/task/FoliaTask.html" title="class in com.github.shanebeee.skr.scheduling.scheduler.task">FoliaTask</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Task wrapper for Folia's <a href="https://jd.papermc.io/paper/1.21.11/io/papermc/paper/threadedregions/scheduler/ScheduledTask.html" title="class or interface in io.papermc.paper.threadedregions.scheduler" class="external-link"><code>ScheduledTask</code></a></div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/JsonDocGenerator.html" title="class in com.github.shanebeee.skr">JsonDocGenerator</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Generator for JSON documentation for Skript addons.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/Registration.html" title="class in com.github.shanebeee.skr">Registration</a></div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/RegionUtils.html" title="class in com.github.shanebeee.skr.scheduling">RegionUtils</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Utility methods for Folia's threaded regions</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/Registration.html" title="class in com.github.shanebeee.skr">Registration</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Registration for registering elements to Skript.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/skript/RegistryClassInfo.html" title="class in com.github.shanebeee.skr.skript">RegistryClassInfo&lt;T&gt;</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/skript/RegistryClassInfo.html" title="class in com.github.shanebeee.skr.skript">RegistryClassInfo&lt;T&gt;</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block"><a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/ClassInfo.html" title="class or interface in ch.njol.skript.classes" class="external-link"><code>ClassInfo</code></a> wrapper class for <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Bukkit Registries</code></a></div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/github/shanebeee/skr/scheduling/scheduler/Scheduler.html" title="interface in com.github.shanebeee.skr.scheduling.scheduler">Scheduler&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Scheduler for scheduling tasks</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/skript/SimpleEntryValidator.html" title="class in com.github.shanebeee.skr.skript">SimpleEntryValidator</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">A simple version of Skript's <a href="https://docs.skriptlang.org/javadocs/org/skriptlang/skript/lang/entry/EntryValidator.html" title="class or interface in org.skriptlang.skript.lang.entry" class="external-link"><code>EntryValidator</code></a></div>
 </div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/scheduler/SpigotScheduler.html" title="class in com.github.shanebeee.skr.scheduling.scheduler">SpigotScheduler</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab2">
+<div class="block">A <a href="com/github/shanebeee/skr/scheduling/scheduler/Scheduler.html" title="interface in com.github.shanebeee.skr.scheduling.scheduler"><code>Scheduler</code></a> using the <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/scheduler/BukkitScheduler.html" title="class or interface in org.bukkit.scheduler" class="external-link"><code>BukkitScheduler</code></a></div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/scheduler/task/SpigotTask.html" title="class in com.github.shanebeee.skr.scheduling.scheduler.task">SpigotTask</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Task wrapper for Bukkit's <a href="https://jd.papermc.io/paper/1.21.11/org/bukkit/scheduler/BukkitTask.html" title="class or interface in org.bukkit.scheduler" class="external-link"><code>BukkitTask</code></a></div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab1"><a href="com/github/shanebeee/skr/scheduling/scheduler/task/Task.html" title="interface in com.github.shanebeee.skr.scheduling.scheduler.task">Task&lt;T&gt;</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab1">
+<div class="block">Base task to be implemented by server tasks</div>
+</div>
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/scheduling/TaskUtils.html" title="class in com.github.shanebeee.skr.scheduling">TaskUtils</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Utility class for creating <a href="com/github/shanebeee/skr/scheduling/scheduler/Scheduler.html" title="interface in com.github.shanebeee.skr.scheduling.scheduler"><code>Schedulers</code></a></div>
+</div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="com/github/shanebeee/skr/Utils.html" title="class in com.github.shanebeee.skr">Utils</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Utility methods used by <a href="com/github/shanebeee/skr/Registration.html" title="class in com.github.shanebeee.skr"><code>Registration</code></a>.</div>
+</div>
 </div>
 </div>
 </div>

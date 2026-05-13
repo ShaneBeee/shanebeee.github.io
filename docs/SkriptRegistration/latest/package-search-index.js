@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.github.shanebeee.skr"},{"l":"com.github.shanebeee.skr.skript"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html","k":"18"},{"l":"com.github.shanebeee.skr"},{"l":"com.github.shanebeee.skr.scheduling"},{"l":"com.github.shanebeee.skr.scheduling.scheduler"},{"l":"com.github.shanebeee.skr.scheduling.scheduler.task"},{"l":"com.github.shanebeee.skr.skript"}];updateSearchResults();
