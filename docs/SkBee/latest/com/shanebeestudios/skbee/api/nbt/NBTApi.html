@@ -98,7 +98,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">NBTApi</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Main NBT api for SkBee</div>
+<div class="block">Helper class for NBT operations</div>
 </div>
 </section>
 <section class="summary">
@@ -128,18 +128,18 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#addNBTToBlock(org.bukkit.block.Block,de.tr7zw.changeme.nbtapi.NBTCompound)" class="member-name-link">addNBTToBlock</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#addNBTToBlock(org.bukkit.block.Block,de.tr7zw.changeme.nbtapi.NBTCompound)" class="member-name-link">addNBTToBlock</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block,
  <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a>&nbsp;compound)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Add NBT to a <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link"><code>Block</code></a>
+<div class="block">Add NBT to a <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link"><code>Block</code></a>
 <br>
 This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTCompound</code></a> into the compound of a block</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#addNBTToEntity(org.bukkit.entity.Entity,de.tr7zw.changeme.nbtapi.NBTCompound)" class="member-name-link">addNBTToEntity</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link">Entity</a>&nbsp;entity,
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#addNBTToEntity(org.bukkit.entity.Entity,de.tr7zw.changeme.nbtapi.NBTCompound)" class="member-name-link">addNBTToEntity</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link">Entity</a>&nbsp;entity,
  <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a>&nbsp;compound)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Add NBT to an <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link"><code>Entity</code></a>
+<div class="block">Add NBT to an <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link"><code>Entity</code></a>
 <br>
 This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTCompound</code></a> into the compound of an entity</div>
 </div>
@@ -170,7 +170,7 @@ This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw
 <div class="block">Get an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTFile.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTFile</code></a></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="NBTCustomOfflinePlayer.html" title="class in com.shanebeestudios.skbee.api.nbt">NBTCustomOfflinePlayer</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNBTOfflinePlayer(org.bukkit.OfflinePlayer)" class="member-name-link">getNBTOfflinePlayer</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/OfflinePlayer.html" title="class or interface in org.bukkit" class="external-link">OfflinePlayer</a>&nbsp;offlinePlayer)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getNBTOfflinePlayer(org.bukkit.OfflinePlayer)" class="member-name-link">getNBTOfflinePlayer</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/OfflinePlayer.html" title="class or interface in org.bukkit" class="external-link">OfflinePlayer</a>&nbsp;offlinePlayer)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Get an <a href="NBTCustomOfflinePlayer.html" title="class in com.shanebeestudios.skbee.api.nbt"><code>NBTCustomOfflinePlayer</code></a></div>
 </div>
@@ -382,7 +382,7 @@ If the NBT is invalid, and error will be thrown.</div>
 <h3>getNBTOfflinePlayer</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a>
-</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="NBTCustomOfflinePlayer.html" title="class in com.shanebeestudios.skbee.api.nbt">NBTCustomOfflinePlayer</a></span>&nbsp;<span class="element-name">getNBTOfflinePlayer</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/OfflinePlayer.html" title="class or interface in org.bukkit" class="external-link">OfflinePlayer</a>&nbsp;offlinePlayer)</span></div>
+</span><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="NBTCustomOfflinePlayer.html" title="class in com.shanebeestudios.skbee.api.nbt">NBTCustomOfflinePlayer</a></span>&nbsp;<span class="element-name">getNBTOfflinePlayer</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/OfflinePlayer.html" title="class or interface in org.bukkit" class="external-link">OfflinePlayer</a>&nbsp;offlinePlayer)</span></div>
 <div class="block">Get an <a href="NBTCustomOfflinePlayer.html" title="class in com.shanebeestudios.skbee.api.nbt"><code>NBTCustomOfflinePlayer</code></a>
 <p>This internally just creates a new NBTFile from the player data folder</p></div>
 <dl class="notes">
@@ -541,9 +541,9 @@ example tag: "custom;sub"</p></div>
 <section class="detail" id="addNBTToBlock(org.bukkit.block.Block,de.tr7zw.changeme.nbtapi.NBTCompound)">
 <h3>addNBTToBlock</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNBTToBlock</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNBTToBlock</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block,
  <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a>&nbsp;compound)</span></div>
-<div class="block">Add NBT to a <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link"><code>Block</code></a>
+<div class="block">Add NBT to a <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link"><code>Block</code></a>
 <br>
 This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTCompound</code></a> into the compound of a block</div>
 <dl class="notes">
@@ -558,9 +558,9 @@ This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw
 <section class="detail" id="addNBTToEntity(org.bukkit.entity.Entity,de.tr7zw.changeme.nbtapi.NBTCompound)">
 <h3>addNBTToEntity</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNBTToEntity</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link">Entity</a>&nbsp;entity,
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addNBTToEntity</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link">Entity</a>&nbsp;entity,
  <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a>&nbsp;compound)</span></div>
-<div class="block">Add NBT to an <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link"><code>Entity</code></a>
+<div class="block">Add NBT to an <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/entity/Entity.html" title="class or interface in org.bukkit.entity" class="external-link"><code>Entity</code></a>
 <br>
 This will merge an <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTCompound</code></a> into the compound of an entity</div>
 <dl class="notes">

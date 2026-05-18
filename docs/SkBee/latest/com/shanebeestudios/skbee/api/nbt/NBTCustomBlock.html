@@ -95,7 +95,7 @@ loadScripts(document, 'script');</script>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">NBTCustomBlock</span>
 <span class="extends-implements">extends <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTContainer.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTContainer</a>
 implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbee.api.nbt">NBTCustom</a></span></div>
-<div class="block">Represents the NBT of a non tile entity block</div>
+<div class="block">Wrapper class for <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTContainer.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link"><code>NBTContainer</code></a> using a Bukkit <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link"><code>Block</code></a></div>
 </div>
 </section>
 <section class="summary">
@@ -106,7 +106,7 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <h2>Field Summary</h2>
 <div class="inherited-list">
 <h3 id="fields-inherited-from-class-com.shanebeestudios.skbee.api.nbt.NBTCustom">Fields inherited from interface&nbsp;<a href="NBTCustom.html#field-summary" title="interface in com.shanebeestudios.skbee.api.nbt">NBTCustom</a></h3>
-<code><a href="NBTCustom.html#KEY">KEY</a>, <a href="NBTCustom.html#OLD_KEY">OLD_KEY</a></code></div>
+<code><a href="NBTCustom.html#KEY">KEY</a></code></div>
 </section>
 </li>
 <!-- ======== CONSTRUCTOR SUMMARY ======== -->
@@ -117,7 +117,7 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
-<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.bukkit.block.Block)" class="member-name-link">NBTCustomBlock</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block)</code></div>
+<div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(org.bukkit.block.Block)" class="member-name-link">NBTCustomBlock</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block)</code></div>
 <div class="col-last even-row-color">&nbsp;</div>
 </div>
 </section>
@@ -135,14 +135,18 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#deleteCustomNBT()" class="member-name-link">deleteCustomNBT</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Delete custom NBT data from this object.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCopy()" class="member-name-link">getCopy</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Get a copy of the NBT of this object.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getCustomNBT(boolean)" class="member-name-link">getCustomNBT</a><wbr>(boolean&nbsp;createTagIfMissing)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Acquires the custom nbt compound for this object.</div>
+<div class="block">Acquires the custom NBT compound for this object.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>protected void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#saveCompound()" class="member-name-link">saveCompound</a>()</code></div>
@@ -183,7 +187,7 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <section class="detail" id="&lt;init&gt;(org.bukkit.block.Block)">
 <h3>NBTCustomBlock</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NBTCustomBlock</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">NBTCustomBlock</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/Block.html" title="class or interface in org.bukkit.block" class="external-link">Block</a>&nbsp;block)</span></div>
 </div>
 </section>
 </li>
@@ -226,6 +230,8 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <h3>deleteCustomNBT</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">deleteCustomNBT</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="NBTCustom.html#deleteCustomNBT()">NBTCustom</a></code></span></div>
+<div class="block">Delete custom NBT data from this object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="NBTCustom.html#deleteCustomNBT()">deleteCustomNBT</a></code>&nbsp;in interface&nbsp;<code><a href="NBTCustom.html" title="interface in com.shanebeestudios.skbee.api.nbt">NBTCustom</a></code></dd>
@@ -239,9 +245,16 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></span>&nbsp;<span class="element-name">getCopy</span>()</div>
+<div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="NBTCustom.html#getCopy()">NBTCustom</a></code></span></div>
+<div class="block">Get a copy of the NBT of this object.
+<p>
+Modifying this will have no effect on the original NBT.
+</p></div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="NBTCustom.html#getCopy()">getCopy</a></code>&nbsp;in interface&nbsp;<code><a href="NBTCustom.html" title="interface in com.shanebeestudios.skbee.api.nbt">NBTCustom</a></code></dd>
+<dt>Returns:</dt>
+<dd>Copy of NBT.</dd>
 </dl>
 </div>
 </section>
@@ -253,7 +266,7 @@ implements <a href="NBTCustom.html" title="interface in com.shanebeestudios.skbe
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Contract.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Contract</a>("true -&gt; !null")
 </span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></span>&nbsp;<span class="element-name">getCustomNBT</span><wbr><span class="parameters">(boolean&nbsp;createTagIfMissing)</span></div>
 <div class="block"><span class="description-from-type-label">Description copied from interface:&nbsp;<code><a href="NBTCustom.html#getCustomNBT(boolean)">NBTCustom</a></code></span></div>
-<div class="block">Acquires the custom nbt compound for this object.</div>
+<div class="block">Acquires the custom NBT compound for this object.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="NBTCustom.html#getCustomNBT(boolean)">getCustomNBT</a></code>&nbsp;in interface&nbsp;<code><a href="NBTCustom.html" title="interface in com.shanebeestudios.skbee.api.nbt">NBTCustom</a></code></dd>

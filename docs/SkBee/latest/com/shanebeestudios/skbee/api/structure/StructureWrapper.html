@@ -95,14 +95,14 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>net.kyori.adventure.key.Keyed, <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
+<dd><code>net.kyori.adventure.key.Keyed, <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">StructureWrapper</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></span></div>
-<div class="block">Wrapper class for <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure</code></a> that includes more information used for saving/placing</div>
+implements <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></span></div>
+<div class="block">Wrapper class for <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure Templates</code></a> that includes more information used for saving/placing</div>
 </div>
 </section>
 <section class="summary">
@@ -121,120 +121,119 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#delete()" class="member-name-link">delete</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Delete structure</div>
+<div class="block">Delete structure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fill(org.bukkit.Location,org.bukkit.util.BlockVector)" class="member-name-link">fill</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/BlockVector.html" title="class or interface in org.bukkit.util" class="external-link">BlockVector</a>&nbsp;blockVector)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#fill(org.bukkit.Location,org.bukkit.util.BlockVector)" class="member-name-link">fill</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/BlockVector.html" title="class or interface in org.bukkit.util" class="external-link">BlockVector</a>&nbsp;blockVector)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Fill a structure between 2 locations</div>
+<div class="block">Fill a structure between 2 locations.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link">BlockState</a>&gt;</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link">BlockState</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBlockStates()" class="member-name-link">getBlockStates</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get a list of available <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link"><code>BlockStates</code></a> of this <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure</code></a>
-<br>
-Will return an empty list of no blocks have been filled</div>
+<div class="block">Get a list of available <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link"><code>BlockStates</code></a> of this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure</code></a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getBukkitStructure()" class="member-name-link">getBukkitStructure</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the instance of the <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Bukkit Structure</code></a></div>
+<div class="block">Get the instance of the Bukkit <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure Template</code></a>.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>float</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getIntegrity()" class="member-name-link">getIntegrity</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the integrity of this structure</div>
+<div class="block">Get the integrity of this structure.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NonNull <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>@NonNull <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link"><code>key</code></a> of this structure</div>
+<div class="block">Get the <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link"><code>key</code></a> of this structure.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getLastPlacedLocation()" class="member-name-link">getLastPlacedLocation</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Get the last location this structure was placed at.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getMirror()" class="member-name-link">getMirror</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the mirror of this structure</div>
+<div class="block">Get the mirror of this structure.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the name of this structure</div>
+<div class="block">Get the name of this structure.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRotation()" class="member-name-link">getRotation</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the rotation of this structure</div>
+<div class="block">Get the rotation of this structure.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a></code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSize()" class="member-name-link">getSize</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the size of this structure represented as a <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link"><code>Vector</code></a></div>
+<div class="block">Get the size of this structure represented as a <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link"><code>Vector</code></a>.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isIncludeEntities()" class="member-name-link">isIncludeEntities</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Whether or not this structure is including entities</div>
+<div class="block">Whether or not this structure is including entities.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.generator.LimitedRegion,org.bukkit.util.Vector)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/generator/LimitedRegion.html" title="class or interface in org.bukkit.generator" class="external-link">LimitedRegion</a>&nbsp;region,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a>&nbsp;vector)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.generator.LimitedRegion,org.bukkit.util.Vector)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/generator/LimitedRegion.html" title="class or interface in org.bukkit.generator" class="external-link">LimitedRegion</a>&nbsp;region,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a>&nbsp;vector)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Place the structure at a location in a LimitedRegion.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.Location)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.Location)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Place the structure at a location</div>
+<div class="block">Place the structure at a location.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.Location,int)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#place(org.bukkit.Location,int)" class="member-name-link">place</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
  int&nbsp;palette)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Place the structure at a location</div>
+<div class="block">Place the structure at a location.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reset()" class="member-name-link">reset</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Reset variables in this structure
-(including mirror, rotation, integrity and inclusion of entities)</div>
+<div class="block">Reset variables in this structure.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#save()" class="member-name-link">save</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Save structure to file</div>
+<div class="block">Save structure to file.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIncludeEntities(boolean)" class="member-name-link">setIncludeEntities</a><wbr>(boolean&nbsp;includeEntities)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set whether this structure should include entities</div>
+<div class="block">Set whether this structure should include entities.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setIntegrity(float)" class="member-name-link">setIntegrity</a><wbr>(float&nbsp;integrity)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set the integrity of this structure</div>
+<div class="block">Set the integrity of this structure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMirror(org.bukkit.block.structure.Mirror)" class="member-name-link">setMirror</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a>&nbsp;mirror)</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setMirror(org.bukkit.block.structure.Mirror)" class="member-name-link">setMirror</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a>&nbsp;mirror)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set the mirror of this structure</div>
+<div class="block">Set the mirror of this structure.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(org.bukkit.block.structure.StructureRotation)" class="member-name-link">setRotation</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a>&nbsp;rotation)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#setRotation(org.bukkit.block.structure.StructureRotation)" class="member-name-link">setRotation</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a>&nbsp;rotation)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Set the rotation of this structure</div>
+<div class="block">Set the rotation of this structure.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="StructureWrapper.html" title="class in com.shanebeestudios.skbee.api.structure">StructureWrapper</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrap(org.bukkit.structure.Structure,org.bukkit.NamespacedKey)" class="member-name-link">wrap</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a>&nbsp;structure,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a>&nbsp;key)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#wrap(org.bukkit.structure.Structure,org.bukkit.NamespacedKey)" class="member-name-link">wrap</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a>&nbsp;structure,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a>&nbsp;key)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Wrap a structure</div>
+<div class="block">Wrap a structure.</div>
 </div>
 </div>
 </div>
@@ -243,8 +242,8 @@ Will return an empty list of no blocks have been filled</div>
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#method-summary" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-org.bukkit.Keyed">Methods inherited from interface&nbsp;<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#method-summary" title="class or interface in org.bukkit" class="external-link">Keyed</a></h3>
-<code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#key()" title="class or interface in org.bukkit" class="external-link">key</a></code></div>
+<h3 id="methods-inherited-from-class-org.bukkit.Keyed">Methods inherited from interface&nbsp;<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#method-summary" title="class or interface in org.bukkit" class="external-link">Keyed</a></h3>
+<code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#key()" title="class or interface in org.bukkit" class="external-link">key</a></code></div>
 </section>
 </li>
 </ul>
@@ -260,9 +259,9 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="wrap(org.bukkit.structure.Structure,org.bukkit.NamespacedKey)">
 <h3>wrap</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StructureWrapper.html" title="class in com.shanebeestudios.skbee.api.structure">StructureWrapper</a></span>&nbsp;<span class="element-name">wrap</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a>&nbsp;structure,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a>&nbsp;key)</span></div>
-<div class="block">Wrap a structure</div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="StructureWrapper.html" title="class in com.shanebeestudios.skbee.api.structure">StructureWrapper</a></span>&nbsp;<span class="element-name">wrap</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a>&nbsp;structure,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a>&nbsp;key)</span></div>
+<div class="block">Wrap a structure.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>structure</code> - Structure to wrap</dd>
@@ -277,13 +276,13 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="fill(org.bukkit.Location,org.bukkit.util.BlockVector)">
 <h3>fill</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">fill</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/BlockVector.html" title="class or interface in org.bukkit.util" class="external-link">BlockVector</a>&nbsp;blockVector)</span></div>
-<div class="block">Fill a structure between 2 locations</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">fill</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/BlockVector.html" title="class or interface in org.bukkit.util" class="external-link">BlockVector</a>&nbsp;blockVector)</span></div>
+<div class="block">Fill a structure between 2 locations.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>location</code> - Starting location</dd>
-<dd><code>blockVector</code> - Vector for opposing corner</dd>
+<dd><code>blockVector</code> - Vector for the opposing corner</dd>
 </dl>
 </div>
 </section>
@@ -292,9 +291,9 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="place(org.bukkit.Location,int)">
 <h3>place</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location,
  int&nbsp;palette)</span></div>
-<div class="block">Place the structure at a location</div>
+<div class="block">Place the structure at a location.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>location</code> - Location to player</dd>
@@ -307,8 +306,17 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="place(org.bukkit.generator.LimitedRegion,org.bukkit.util.Vector)">
 <h3>place</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/generator/LimitedRegion.html" title="class or interface in org.bukkit.generator" class="external-link">LimitedRegion</a>&nbsp;region,
- <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a>&nbsp;vector)</span></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/generator/LimitedRegion.html" title="class or interface in org.bukkit.generator" class="external-link">LimitedRegion</a>&nbsp;region,
+ <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a>&nbsp;vector)</span></div>
+<div class="block">Place the structure at a location in a LimitedRegion.
+<p>
+This is used in chunk generation to place structures.
+</p></div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>region</code> - Region to place structure in</dd>
+<dd><code>vector</code> - Vector for placement</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -316,8 +324,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="place(org.bukkit.Location)">
 <h3>place</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location)</span></div>
-<div class="block">Place the structure at a location
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">place</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a>&nbsp;location)</span></div>
+<div class="block">Place the structure at a location.
 <p>This will place with a random palette, see <a href="#place(org.bukkit.Location,int)"><code>place(Location, int)</code></a></p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -331,7 +339,7 @@ Will return an empty list of no blocks have been filled</div>
 <h3>save</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">save</span>()</div>
-<div class="block">Save structure to file</div>
+<div class="block">Save structure to file.</div>
 </div>
 </section>
 </li>
@@ -340,7 +348,7 @@ Will return an empty list of no blocks have been filled</div>
 <h3>delete</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">delete</span>()</div>
-<div class="block">Delete structure</div>
+<div class="block">Delete structure.</div>
 </div>
 </section>
 </li>
@@ -349,8 +357,8 @@ Will return an empty list of no blocks have been filled</div>
 <h3>getBlockStates</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link">BlockState</a>&gt;</span>&nbsp;<span class="element-name">getBlockStates</span>()</div>
-<div class="block">Get a list of available <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link"><code>BlockStates</code></a> of this <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure</code></a>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a> <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link">BlockState</a>&gt;</span>&nbsp;<span class="element-name">getBlockStates</span>()</div>
+<div class="block">Get a list of available <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/BlockState.html" title="class or interface in org.bukkit.block" class="external-link"><code>BlockStates</code></a> of this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure</code></a>.
 <br>
 Will return an empty list of no blocks have been filled</div>
 <dl class="notes">
@@ -364,8 +372,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="getBukkitStructure()">
 <h3>getBukkitStructure</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a></span>&nbsp;<span class="element-name">getBukkitStructure</span>()</div>
-<div class="block">Get the instance of the <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Bukkit Structure</code></a></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link">Structure</a></span>&nbsp;<span class="element-name">getBukkitStructure</span>()</div>
+<div class="block">Get the instance of the Bukkit <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/structure/Structure.html" title="class or interface in org.bukkit.structure" class="external-link"><code>Structure Template</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Bukkit structure</dd>
@@ -378,7 +386,7 @@ Will return an empty list of no blocks have been filled</div>
 <h3>getName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
-<div class="block">Get the name of this structure</div>
+<div class="block">Get the name of this structure.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Name of structure</dd>
@@ -390,11 +398,11 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="getKey()">
 <h3>getKey</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@NonNull <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
-<div class="block">Get the <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link"><code>key</code></a> of this structure</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">@NonNull <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+<div class="block">Get the <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link"><code>key</code></a> of this structure.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#getKey()" title="class or interface in org.bukkit" class="external-link">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
+<dd><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#getKey()" title="class or interface in org.bukkit" class="external-link">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
 <dt>Returns:</dt>
 <dd>Key of this structure</dd>
 </dl>
@@ -405,8 +413,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="getRotation()">
 <h3>getRotation</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a></span>&nbsp;<span class="element-name">getRotation</span>()</div>
-<div class="block">Get the rotation of this structure</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a></span>&nbsp;<span class="element-name">getRotation</span>()</div>
+<div class="block">Get the rotation of this structure.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Rotation of this structure</dd>
@@ -418,8 +426,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="setRotation(org.bukkit.block.structure.StructureRotation)">
 <h3>setRotation</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a>&nbsp;rotation)</span></div>
-<div class="block">Set the rotation of this structure</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setRotation</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/StructureRotation.html" title="class or interface in org.bukkit.block.structure" class="external-link">StructureRotation</a>&nbsp;rotation)</span></div>
+<div class="block">Set the rotation of this structure.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>rotation</code> - Rotation of this structure</dd>
@@ -431,8 +439,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="getMirror()">
 <h3>getMirror</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a></span>&nbsp;<span class="element-name">getMirror</span>()</div>
-<div class="block">Get the mirror of this structure</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a></span>&nbsp;<span class="element-name">getMirror</span>()</div>
+<div class="block">Get the mirror of this structure.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Mirror of this structure</dd>
@@ -444,8 +452,8 @@ Will return an empty list of no blocks have been filled</div>
 <section class="detail" id="setMirror(org.bukkit.block.structure.Mirror)">
 <h3>setMirror</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMirror</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a>&nbsp;mirror)</span></div>
-<div class="block">Set the mirror of this structure
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setMirror</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/block/structure/Mirror.html" title="class or interface in org.bukkit.block.structure" class="external-link">Mirror</a>&nbsp;mirror)</span></div>
+<div class="block">Set the mirror of this structure.
 <p>Represents how a Structure can be mirrored upon being loaded.</p></div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -459,7 +467,7 @@ Will return an empty list of no blocks have been filled</div>
 <h3>getIntegrity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">float</span>&nbsp;<span class="element-name">getIntegrity</span>()</div>
-<div class="block">Get the integrity of this structure</div>
+<div class="block">Get the integrity of this structure.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Integrity of this structure</dd>
@@ -478,7 +486,7 @@ Will return an empty list of no blocks have been filled</div>
 <h3>setIntegrity</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIntegrity</span><wbr><span class="parameters">(float&nbsp;integrity)</span></div>
-<div class="block">Set the integrity of this structure
+<div class="block">Set the integrity of this structure.
 <p>
 Determines how damaged the building should look by randomly skipping blocks to place.
 This value can range from 0 to 1.
@@ -496,7 +504,7 @@ With 0 removing all blocks and 1 spawning the structure in pristine condition.
 <h3>isIncludeEntities</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isIncludeEntities</span>()</div>
-<div class="block">Whether or not this structure is including entities</div>
+<div class="block">Whether or not this structure is including entities.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Whether or not this structure is including entities</dd>
@@ -509,7 +517,7 @@ With 0 removing all blocks and 1 spawning the structure in pristine condition.
 <h3>setIncludeEntities</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">setIncludeEntities</span><wbr><span class="parameters">(boolean&nbsp;includeEntities)</span></div>
-<div class="block">Set whether this structure should include entities</div>
+<div class="block">Set whether this structure should include entities.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>includeEntities</code> - Whether to include entities</dd>
@@ -521,8 +529,8 @@ With 0 removing all blocks and 1 spawning the structure in pristine condition.
 <section class="detail" id="getSize()">
 <h3>getSize</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
-<div class="block">Get the size of this structure represented as a <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link"><code>Vector</code></a></div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link">Vector</a></span>&nbsp;<span class="element-name">getSize</span>()</div>
+<div class="block">Get the size of this structure represented as a <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/util/Vector.html" title="class or interface in org.bukkit.util" class="external-link"><code>Vector</code></a>.</div>
 <dl class="notes">
 <dt>Returns:</dt>
 <dd>Size of structure</dd>
@@ -534,7 +542,7 @@ With 0 removing all blocks and 1 spawning the structure in pristine condition.
 <section class="detail" id="getLastPlacedLocation()">
 <h3>getLastPlacedLocation</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a></span>&nbsp;<span class="element-name">getLastPlacedLocation</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Location.html" title="class or interface in org.bukkit" class="external-link">Location</a></span>&nbsp;<span class="element-name">getLastPlacedLocation</span>()</div>
 <div class="block">Get the last location this structure was placed at.
 <p>This is persistent, and will only work with SkBee placing.</p></div>
 <dl class="notes">
@@ -549,8 +557,10 @@ With 0 removing all blocks and 1 spawning the structure in pristine condition.
 <h3>reset</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">reset</span>()</div>
-<div class="block">Reset variables in this structure
-(including mirror, rotation, integrity and inclusion of entities)</div>
+<div class="block">Reset variables in this structure.
+<p>
+(including mirror, rotation, integrity and inclusion of entities)
+</p></div>
 </div>
 </section>
 </li>

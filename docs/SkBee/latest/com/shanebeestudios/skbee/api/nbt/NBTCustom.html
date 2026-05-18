@@ -58,7 +58,6 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-summary" tabindex="0">Method Summary</a></li>
 <li><a href="#field-detail" tabindex="0">Field Details</a>
 <ol class="toc-list">
-<li><a href="#OLD_KEY" tabindex="0">OLD_KEY</a></li>
 <li><a href="#KEY" tabindex="0">KEY</a></li>
 </ol>
 </li>
@@ -85,6 +84,7 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public interface </span><span class="element-name type-name-label">NBTCustom</span></div>
+<div class="block">Base interface for classes that override NBT-API classes.</div>
 </div>
 </section>
 <section class="summary">
@@ -100,10 +100,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>static final <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color"><code><a href="#KEY" class="member-name-link">KEY</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
-<div class="col-first odd-row-color"><code>static final <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></code></div>
-<div class="col-second odd-row-color"><code><a href="#OLD_KEY" class="member-name-link">OLD_KEY</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Represents the custom NBT key for storage.</div>
+</div>
 </div>
 </section>
 </li>
@@ -120,17 +119,23 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#deleteCustomNBT()" class="member-name-link">deleteCustomNBT</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Delete custom NBT data from this object.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCopy()" class="member-name-link">getCopy</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Get a copy of the NBT of this object.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code>default <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5"><code><a href="#getCustomNBT()" class="member-name-link">getCustomNBT</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab5">
+<div class="block">Acquires the custom NBT compound for this object.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#getCustomNBT(boolean)" class="member-name-link">getCustomNBT</a><wbr>(boolean&nbsp;createTagIfMissing)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
-<div class="block">Acquires the custom nbt compound for this object.</div>
+<div class="block">Acquires the custom NBT compound for this object.</div>
 </div>
 </div>
 </div>
@@ -147,18 +152,11 @@ loadScripts(document, 'script');</script>
 <h2>Field Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="OLD_KEY">
-<h3>OLD_KEY</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></span>&nbsp;<span class="element-name">OLD_KEY</span></div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="KEY">
 <h3>KEY</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">static final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">KEY</span></div>
+<div class="block">Represents the custom NBT key for storage.</div>
 <dl class="notes">
 <dt>See Also:</dt>
 <dd>
@@ -183,6 +181,7 @@ loadScripts(document, 'script');</script>
 <h3>deleteCustomNBT</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="return-type">void</span>&nbsp;<span class="element-name">deleteCustomNBT</span>()</div>
+<div class="block">Delete custom NBT data from this object.</div>
 </div>
 </section>
 </li>
@@ -192,6 +191,14 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
 </span><span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></span>&nbsp;<span class="element-name">getCopy</span>()</div>
+<div class="block">Get a copy of the NBT of this object.
+<p>
+Modifying this will have no effect on the original NBT.
+</p></div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Copy of NBT.</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -201,6 +208,11 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
 </span><span class="modifiers">default</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></span>&nbsp;<span class="element-name">getCustomNBT</span>()</div>
+<div class="block">Acquires the custom NBT compound for this object.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>Custom NBT compound.</dd>
+</dl>
 </div>
 </section>
 </li>
@@ -210,7 +222,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Contract.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Contract</a>("true -&gt; !null")
 </span><span class="return-type"><a href="https://tr7zw.github.io/Item-NBT-API/v2-api/de/tr7zw/changeme/nbtapi/NBTCompound.html" title="class or interface in de.tr7zw.changeme.nbtapi" class="external-link">NBTCompound</a></span>&nbsp;<span class="element-name">getCustomNBT</span><wbr><span class="parameters">(boolean&nbsp;createTagIfMissing)</span></div>
-<div class="block">Acquires the custom nbt compound for this object.</div>
+<div class="block">Acquires the custom NBT compound for this object.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>createTagIfMissing</code> - Whether to create an empty compound on this object if it's not already present.</dd>

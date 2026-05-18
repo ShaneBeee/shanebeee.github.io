@@ -64,6 +64,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#method-detail" tabindex="0">Method Details</a>
 <ol class="toc-list">
 <li><a href="#modifyComponent(java.lang.Object%5B%5D,ch.njol.skript.classes.Changer.ChangeMode,io.papermc.paper.datacomponent.DataComponentType.Valued,T)" tabindex="0">modifyComponent(Object[], Changer.ChangeMode, DataComponentType.Valued, T)</a></li>
+<li><a href="#modifyComponent(java.lang.Object%5B%5D,io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.BiConsumer)" tabindex="0">modifyComponent(Object[], DataComponentType.Valued, BiConsumer)</a></li>
+<li><a href="#takeAPeakAtComponent(java.lang.Object%5B%5D,io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.Consumer)" tabindex="0">takeAPeakAtComponent(Object[], DataComponentType.Valued, Consumer)</a></li>
 </ol>
 </li>
 </ol>
@@ -81,7 +83,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ItemComponentUtils</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Utility class for <a href="https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a></div>
+<div class="block">Utility class for <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a></div>
 </div>
 </section>
 <section class="summary">
@@ -113,10 +115,24 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#modifyComponent(java.lang.Object%5B%5D,ch.njol.skript.classes.Changer.ChangeMode,io.papermc.paper.datacomponent.DataComponentType.Valued,T)" class="member-name-link">modifyComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
  <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/Changer.ChangeMode.html" title="class or interface in ch.njol.skript.classes" class="external-link">Changer.ChangeMode</a>&nbsp;mode,
- <a href="https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
  T&nbsp;value)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items</div>
+<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;void</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#modifyComponent(java.lang.Object%5B%5D,io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.BiConsumer)" class="member-name-link">modifyComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T, <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link">ItemStack</a>&gt;&nbsp;consumer)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static &lt;T&gt;&nbsp;void</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#takeAPeakAtComponent(java.lang.Object%5B%5D,io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.Consumer)" class="member-name-link">takeAPeakAtComponent</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;T&gt;&nbsp;consumer)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="block">Quick method to take a peak at <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
 </div>
 </div>
 </div>
@@ -158,18 +174,58 @@ loadScripts(document, 'script');</script>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">modifyComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
  <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/Changer.ChangeMode.html" title="class or interface in ch.njol.skript.classes" class="external-link">Changer.ChangeMode</a>&nbsp;mode,
  <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
- <a href="https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
  <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a>
  T&nbsp;value)</span></div>
-<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/1.21.10/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items</div>
+<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
 <dl class="notes">
 <dt>Type Parameters:</dt>
 <dd><span id="modifyComponent(java.lang.Object[],ch.njol.skript.classes.Changer.ChangeMode,io.papermc.paper.datacomponent.DataComponentType.Valued,T)-type-param-T"><code>T</code> - DataComponentType value</span></dd>
 <dt>Parameters:</dt>
-<dd><code>objects</code> - Item based objects to modify (Accepts can be <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link"><code>ItemStack</code></a>, <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/aliases/ItemType.html" title="class or interface in ch.njol.skript.aliases" class="external-link"><code>ItemType</code></a> or <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/util/slot/Slot.html" title="class or interface in ch.njol.skript.util.slot" class="external-link"><code>Slot</code></a>)</dd>
+<dd><code>objects</code> - Item based objects to modify (Accepts can be <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link"><code>ItemStack</code></a>, <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/aliases/ItemType.html" title="class or interface in ch.njol.skript.aliases" class="external-link"><code>ItemType</code></a> or <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/util/slot/Slot.html" title="class or interface in ch.njol.skript.util.slot" class="external-link"><code>Slot</code></a>)</dd>
 <dd><code>mode</code> - ChangeMode passed from expression</dd>
 <dd><code>type</code> - DataComponentType to modify</dd>
 <dd><code>value</code> - Value to set</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="modifyComponent(java.lang.Object[],io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.BiConsumer)">
+<h3>modifyComponent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">modifyComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
+ <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/BiConsumer.html" title="class or interface in java.util.function" class="external-link">BiConsumer</a>&lt;T, <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link">ItemStack</a>&gt;&nbsp;consumer)</span></div>
+<div class="block">Quick method to modify <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="modifyComponent(java.lang.Object[],io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.BiConsumer)-type-param-T"><code>T</code> - DataComponentType value</span></dd>
+<dt>Parameters:</dt>
+<dd><code>objects</code> - Item based objects to modify (Accepts can be <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link"><code>ItemStack</code></a>, <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/aliases/ItemType.html" title="class or interface in ch.njol.skript.aliases" class="external-link"><code>ItemType</code></a> or <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/util/slot/Slot.html" title="class or interface in ch.njol.skript.util.slot" class="external-link"><code>Slot</code></a>)</dd>
+<dd><code>type</code> - DataComponentType to modify</dd>
+<dd><code>consumer</code> - BiConsumer to accept the DataComponentType value and ItemStack</dd>
+</dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="takeAPeakAtComponent(java.lang.Object[],io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.Consumer)">
+<h3>takeAPeakAtComponent</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="type-parameters">&lt;T&gt;</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">takeAPeakAtComponent</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>[]&nbsp;objects,
+ <a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
+ <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.Valued.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link">DataComponentType.Valued</a>&lt;T&gt;&nbsp;type,
+ <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/function/Consumer.html" title="class or interface in java.util.function" class="external-link">Consumer</a>&lt;T&gt;&nbsp;consumer)</span></div>
+<div class="block">Quick method to take a peak at <a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/datacomponent/DataComponentType.html" title="class or interface in io.papermc.paper.datacomponent" class="external-link"><code>DataComponents</code></a> of items.</div>
+<dl class="notes">
+<dt>Type Parameters:</dt>
+<dd><span id="takeAPeakAtComponent(java.lang.Object[],io.papermc.paper.datacomponent.DataComponentType.Valued,java.util.function.Consumer)-type-param-T"><code>T</code> - DataComponentType value</span></dd>
+<dt>Parameters:</dt>
+<dd><code>objects</code> - Item based objects to modify (Accepts can be <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/inventory/ItemStack.html" title="class or interface in org.bukkit.inventory" class="external-link"><code>ItemStack</code></a>, <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/aliases/ItemType.html" title="class or interface in ch.njol.skript.aliases" class="external-link"><code>ItemType</code></a> or <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/util/slot/Slot.html" title="class or interface in ch.njol.skript.util.slot" class="external-link"><code>Slot</code></a>)</dd>
+<dd><code>type</code> - DataComponentType to modify</dd>
+<dd><code>consumer</code> - Consumer to accept the DataComponentType value</dd>
 </dl>
 </div>
 </section>

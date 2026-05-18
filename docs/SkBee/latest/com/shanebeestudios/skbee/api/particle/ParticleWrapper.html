@@ -81,13 +81,17 @@ loadScripts(document, 'script');</script>
 <section class="class-description" id="class-description">
 <dl class="notes">
 <dt>All Implemented Interfaces:</dt>
-<dd><code>net.kyori.adventure.key.Keyed, <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
+<dd><code>net.kyori.adventure.key.Keyed, <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
 </dl>
 <hr>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">ParticleWrapper</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a>
-implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></span></div>
+implements <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></span></div>
+<div class="block">Wrapper for Bukkit Particles
+<p>
+This was created due to Skript registering an unusable Particle ClassInfo
+</p></div>
 </div>
 </section>
 <section class="summary">
@@ -108,7 +112,7 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Get a list of all available particles</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getKey()" class="member-name-link">getKey</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
@@ -124,11 +128,11 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/Parser.html" title="class or interface in ch.njol.skript.classes" class="external-link">Parser</a><wbr>&lt;<a href="ParticleWrapper.html" title="class in com.shanebeestudios.skbee.api.particle">ParticleWrapper</a>&gt;</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getParser()" class="member-name-link">getParser</a>()</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">&nbsp;</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a></code></div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getParticle()" class="member-name-link">getParticle</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ParticleWrapper.html" title="class in com.shanebeestudios.skbee.api.particle">ParticleWrapper</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getParticle(org.bukkit.Particle)" class="member-name-link">getParticle</a><wbr>(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a>&nbsp;particle)</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#getParticle(org.bukkit.Particle)" class="member-name-link">getParticle</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a>&nbsp;particle)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Get the ParticleWrapper for a Particle</div>
 </div>
@@ -145,8 +149,8 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <h3 id="methods-inherited-from-class-java.lang.Object">Methods inherited from class&nbsp;<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#method-summary" title="class or interface in java.lang" class="external-link">Object</a></h3>
 <code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#clone()" title="class or interface in java.lang" class="external-link">clone</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#equals(java.lang.Object)" title="class or interface in java.lang" class="external-link">equals</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#finalize()" title="class or interface in java.lang" class="external-link">finalize</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#getClass()" title="class or interface in java.lang" class="external-link">getClass</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#hashCode()" title="class or interface in java.lang" class="external-link">hashCode</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notify()" title="class or interface in java.lang" class="external-link">notify</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#notifyAll()" title="class or interface in java.lang" class="external-link">notifyAll</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait()" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long)" title="class or interface in java.lang" class="external-link">wait</a>, <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html#wait(long,int)" title="class or interface in java.lang" class="external-link">wait</a></code></div>
 <div class="inherited-list">
-<h3 id="methods-inherited-from-class-org.bukkit.Keyed">Methods inherited from interface&nbsp;<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#method-summary" title="class or interface in org.bukkit" class="external-link">Keyed</a></h3>
-<code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#key()" title="class or interface in org.bukkit" class="external-link">key</a></code></div>
+<h3 id="methods-inherited-from-class-org.bukkit.Keyed">Methods inherited from interface&nbsp;<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#method-summary" title="class or interface in org.bukkit" class="external-link">Keyed</a></h3>
+<code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#key()" title="class or interface in org.bukkit" class="external-link">key</a></code></div>
 </section>
 </li>
 </ul>
@@ -211,7 +215,7 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <section class="detail" id="getParticle(org.bukkit.Particle)">
 <h3>getParticle</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParticleWrapper.html" title="class in com.shanebeestudios.skbee.api.particle">ParticleWrapper</a></span>&nbsp;<span class="element-name">getParticle</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a>&nbsp;particle)</span></div>
+<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ParticleWrapper.html" title="class in com.shanebeestudios.skbee.api.particle">ParticleWrapper</a></span>&nbsp;<span class="element-name">getParticle</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a>&nbsp;particle)</span></div>
 <div class="block">Get the ParticleWrapper for a Particle</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -243,7 +247,7 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <section class="detail" id="getParticle()">
 <h3>getParticle</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a></span>&nbsp;<span class="element-name">getParticle</span>()</div>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Particle.html" title="class or interface in org.bukkit" class="external-link">Particle</a></span>&nbsp;<span class="element-name">getParticle</span>()</div>
 </div>
 </section>
 </li>
@@ -252,10 +256,10 @@ implements <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" t
 <h3>getKey</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
+</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/NotNull.html" title="class or interface in org.jetbrains.annotations" class="external-link">@NotNull</a> <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/NamespacedKey.html" title="class or interface in org.bukkit" class="external-link">NamespacedKey</a></span>&nbsp;<span class="element-name">getKey</span>()</div>
 <dl class="notes">
 <dt>Specified by:</dt>
-<dd><code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html#getKey()" title="class or interface in org.bukkit" class="external-link">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="https://jd.papermc.io/paper/1.21.10/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
+<dd><code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html#getKey()" title="class or interface in org.bukkit" class="external-link">getKey</a></code>&nbsp;in interface&nbsp;<code><a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a></code></dd>
 </dl>
 </div>
 </section>
