@@ -89,6 +89,65 @@
         a.btn:hover {
             opacity: 0.9;
         }
+        /* Pong Game Styles */
+        #pong-container {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #000;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px rgba(0,0,0,0.8);
+            z-index: 1000;
+            padding: 10px;
+            text-align: center;
+        }
+        #pong-canvas {
+            background: #000;
+            display: block;
+            margin: 0 auto;
+            border: 2px solid #555;
+        }
+        .pong-close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            background: var(--primary);
+            color: #000;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 30px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .pong-btn {
+            background: none;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 5px 10px;
+            cursor: pointer;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.8rem;
+            opacity: 0.3;
+            transition: opacity 0.3s;
+            margin-top: 10px;
+        }
+        .pong-btn:hover {
+            opacity: 1;
+        }
+        #pong-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -125,7 +184,152 @@
 
         <footer class="footer">
             &copy; 2026 ShaneBee
+            <br>
+            <button class="pong-btn" onclick="togglePong()">[ ? ]</button>
         </footer>
     </div>
+
+    <div id="pong-overlay" onclick="togglePong()"></div>
+    <div id="pong-container">
+        <div class="pong-close" onclick="togglePong()">&times;</div>
+        <h3 style="color: var(--primary); margin: 0 0 10px 0; font-family: 'Courier New', Courier, monospace;">Pong - Inspired by itsSparky200</h3>
+        <canvas id="pong-canvas" width="600" height="400"></canvas>
+        <p style="font-family: monospace; color: var(--primary); font-size: 0.8rem; margin-top: 5px;">Use Up/Down Arrows or W/S to move</p>
+    </div>
+
+    <script>
+        const canvas = document.getElementById('pong-canvas');
+        const ctx = canvas.getContext('2d');
+        const container = document.getElementById('pong-container');
+        const overlay = document.getElementById('pong-overlay');
+
+        let gameRunning = false;
+        let animationId;
+
+        const paddleWidth = 10, paddleHeight = 80;
+        const ballSize = 8;
+
+        let fuckYouJavaPlayer = { x: 0, y: canvas.height/2 - paddleHeight/2, score: 0 };
+        let fuckYouJavaComputer = { x: canvas.width - paddleWidth, y: canvas.height/2 - paddleHeight/2, score: 0 };
+        let fuckYouJavaBall = { x: canvas.width/2, y: canvas.height/2, dx: 4, dy: 4 };
+
+        let upPressed = false;
+        let downPressed = false;
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp' || e.key === 'w') {
+                upPressed = true;
+                if (gameRunning) e.preventDefault();
+            }
+            if (e.key === 'ArrowDown' || e.key === 's') {
+                downPressed = true;
+                if (gameRunning) e.preventDefault();
+            }
+        });
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowUp' || e.key === 'w') upPressed = false;
+            if (e.key === 'ArrowDown' || e.key === 's') downPressed = false;
+        });
+
+        function togglePong() {
+            gameRunning = !gameRunning;
+            if (gameRunning) {
+                container.style.display = 'block';
+                overlay.style.display = 'block';
+                resetGame();
+                gameLoop();
+            } else {
+                container.style.display = 'none';
+                overlay.style.display = 'none';
+                cancelAnimationFrame(animationId);
+            }
+        }
+
+        function resetGame() {
+            fuckYouJavaPlayer.score = 0;
+            fuckYouJavaComputer.score = 0;
+            resetBall();
+        }
+
+        function resetBall() {
+            fuckYouJavaBall.x = canvas.width / 2;
+            fuckYouJavaBall.y = canvas.height / 2;
+            fuckYouJavaBall.dx = (Math.random() > 0.5 ? 4 : -4);
+            fuckYouJavaBall.dy = (Math.random() > 0.5 ? 4 : -4);
+        }
+
+        function update() {
+            // Player movement
+            if (upPressed && fuckYouJavaPlayer.y > 0) fuckYouJavaPlayer.y -= 7;
+            if (downPressed && fuckYouJavaPlayer.y < canvas.height - paddleHeight) fuckYouJavaPlayer.y += 7;
+
+            // Computer movement (simple AI)
+            let computerTarget = fuckYouJavaBall.y - paddleHeight/2;
+            if (fuckYouJavaComputer.y < computerTarget) fuckYouJavaComputer.y += 3.5;
+            else if (fuckYouJavaComputer.y > computerTarget) fuckYouJavaComputer.y -= 3.5;
+
+            // Ball movement
+            fuckYouJavaBall.x += fuckYouJavaBall.dx;
+            fuckYouJavaBall.y += fuckYouJavaBall.dy;
+
+            // Wall collision (top/bottom)
+            if (fuckYouJavaBall.y <= 0 || fuckYouJavaBall.y >= canvas.height - ballSize) fuckYouJavaBall.dy *= -1;
+
+            // Paddle collision
+            if (fuckYouJavaBall.dx < 0) { // Moving towards player
+                if (fuckYouJavaBall.x <= paddleWidth && fuckYouJavaBall.y + ballSize >= fuckYouJavaPlayer.y && fuckYouJavaBall.y <= fuckYouJavaPlayer.y + paddleHeight) {
+                    fuckYouJavaBall.dx *= -1.1; // Speed up slightly
+                    fuckYouJavaBall.x = paddleWidth;
+                }
+            } else { // Moving towards computer
+                if (fuckYouJavaBall.x >= canvas.width - paddleWidth - ballSize && fuckYouJavaBall.y + ballSize >= fuckYouJavaComputer.y && fuckYouJavaBall.y <= fuckYouJavaComputer.y + paddleHeight) {
+                    fuckYouJavaBall.dx *= -1.1;
+                    fuckYouJavaBall.x = canvas.width - paddleWidth - ballSize;
+                }
+            }
+
+            // Scoring
+            if (fuckYouJavaBall.x < 0) {
+                fuckYouJavaComputer.score++;
+                resetBall();
+            } else if (fuckYouJavaBall.x > canvas.width) {
+                fuckYouJavaPlayer.score++;
+                resetBall();
+            }
+        }
+
+        function draw() {
+            ctx.fillStyle = '#000';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Center line
+            ctx.strokeStyle = '#333';
+            ctx.setLineDash([10, 10]);
+            ctx.beginPath();
+            ctx.moveTo(canvas.width/2, 0);
+            ctx.lineTo(canvas.width/2, canvas.height);
+            ctx.stroke();
+
+            // Paddles
+            ctx.fillStyle = '#f39c12';
+            ctx.fillRect(fuckYouJavaPlayer.x, fuckYouJavaPlayer.y, paddleWidth, paddleHeight);
+            ctx.fillRect(fuckYouJavaComputer.x, fuckYouJavaComputer.y, paddleWidth, paddleHeight);
+
+            // Ball
+            ctx.fillStyle = '#ecf0f1';
+            ctx.fillRect(fuckYouJavaBall.x, fuckYouJavaBall.y, ballSize, ballSize);
+
+            // Scores
+            ctx.font = '30px Courier New';
+            ctx.fillText(fuckYouJavaPlayer.score, canvas.width/4, 50);
+            ctx.fillText(fuckYouJavaComputer.score, 3*canvas.width/4, 50);
+        }
+
+        function gameLoop() {
+            update();
+            draw();
+            animationId = requestAnimationFrame(gameLoop);
+        }
+    </script>
 </body>
 </html>
