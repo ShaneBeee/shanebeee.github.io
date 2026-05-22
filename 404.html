@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        :root {
+            --primary: #f39c12;
+            --bg: #1a1a1a;
+            --text: #ecf0f1;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 { color: var(--primary); font-size: 4rem; margin: 0; }
+        p { font-size: 1.2rem; opacity: 0.8; }
+        .loader {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 2s linear infinite;
+            display: none;
+            margin: 20px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 0.8rem 1.5rem;
+            background-color: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+        .btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>404</h1>
+        <p id="message">Oops! The page you're looking for doesn't exist.</p>
+        <div id="loader" class="loader"></div>
+        <a href="/" class="btn">Go Home</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(document).ready(function() {
+            const path = window.location.pathname;
+            console.log("404 Path:", path);
+            
+            // Extract the base path (everything before /docs/)
+            const docsIndex = path.toLowerCase().indexOf("/docs/");
+            if (docsIndex !== -1) {
+                const prefix = path.substring(0, docsIndex);
+                const remaining = path.substring(docsIndex + 6); // +6 for "/docs/"
+                const parts = remaining.split("/");
+                const projectName = parts[0];
+                
+                if (parts[1] && parts[1].toLowerCase() === "latest") {
+                    const subPath = parts.slice(2).join("/");
+                    const finalSubPath = subPath ? "/" + subPath : "";
+                    
+                    console.log("Redirect check for Project:", projectName);
+                    
+                    $("#message").text("Finding latest version for " + projectName + "...");
+                    $("#loader").show();
+                    
+                    $.get("https://api.github.com/repos/ShaneBeee/shanebeee.github.io/contents/docs/" + projectName, function(data) {
+                        const versions = data
+                            .filter(item => item.type === "dir" && item.name !== "latest")
+                            .sort((a, b) => b.name.localeCompare(a.name, undefined, {numeric: true, sensitivity: 'base'}));
+
+                        if (versions.length > 0) {
+                            const latestVersion = versions[0].name;
+                            const newPath = prefix + "/docs/" + projectName + "/" + latestVersion + finalSubPath;
+                            console.log("Redirecting to:", newPath);
+                            window.location.replace(newPath);
+                        } else {
+                            $("#message").text("No versions found for " + projectName);
+                            $("#loader").hide();
+                        }
+                    }).fail(function() {
+                        $("#message").text("Oops! Could not find that project.");
+                        $("#loader").hide();
+                    });
+                    return;
+                }
+            }
+            console.log("Path did not match /docs/ProjectName/latest/ pattern");
+        });
+    </script>
+</body>
+</html>

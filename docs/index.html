@@ -99,18 +99,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(document).ready(function() {
-            $.get("https://api.github.com/repos/ShaneBeee/shanebeee.github.io/contents/docs/", function(data) {
+            const repoOwner = "ShaneBeee";
+            const repoName = "shanebeee.github.io";
+            const docsPath = "docs";
+
+            $.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/${docsPath}`, function(data) {
+                const projects = data
+                    .filter(item => item.type === "dir")
+                    .map(item => item.name);
+
                 $("#loading").hide();
-                for(let dir of data) {
-                    if(dir.name === "index.html" || dir.type !== "dir") continue;
+                if (projects.length === 0) {
+                    $("#list").append("<p>No projects found.</p>");
+                    return;
+                }
+
+                for(let project of projects) {
                     $("#list").append(`
-                        <a href="${dir.name}" class="card">
-                            <h3>${dir.name}</h3>
+                        <a href="${project}" class="card">
+                            <h3>${project}</h3>
                         </a>
                     `);
                 }
             }).fail(function() {
-                $("#loading").text("Failed to load JavaDocs list. Please try again later.");
+                $("#loading").hide();
+                $("#list").append("<p>Failed to load JavaDocs list. GitHub API rate limit might be exceeded.</p>");
             });
         });
     </script>

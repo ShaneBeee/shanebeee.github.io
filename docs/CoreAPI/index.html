@@ -113,27 +113,43 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
+                <script>
         $(document).ready(function() {
-            $.get("https://api.github.com/repos/ShaneBeee/shanebeee.github.io/contents/docs/CoreAPI/", function(data) {
-                $("#loading").hide();
-                // Filter and sort versions (dirs only, exclude index.html)
+            const repoOwner = "ShaneBeee";
+            const repoName = "shanebeee.github.io";
+            const projectName = "CoreAPI";
+
+            $.get(`https://api.github.com/repos/${repoOwner}/${repoName}/contents/docs/${projectName}`, function(data) {
                 const versions = data
-                    .filter(item => item.type === "dir")
-                    .sort((a, b) => b.name.localeCompare(a.name, undefined, {numeric: true, sensitivity: 'base'}));
+                    .filter(item => item.type === "dir" && item.name !== "latest")
+                    .map(item => item.name)
+                    .sort((a, b) => b.localeCompare(a, undefined, {numeric: true, sensitivity: 'base'}));
+
+                // Add 'latest' to the beginning if it exists in the physical directory
+                const hasLatestDir = data.some(item => item.type === "dir" && item.name === "latest");
+                if (hasLatestDir) {
+                    versions.unshift("latest");
+                }
+
+                $("#loading").hide();
+                if (versions.length === 0) {
+                    $("#list").append("<p>No versions found.</p>");
+                    return;
+                }
 
                 for(let i = 0; i < versions.length; i++) {
-                    const dir = versions[i];
-                    const isLatest = dir.name === "latest" || (i === 0 && !versions.some(v => v.name === "latest"));
+                    const versionName = versions[i];
+                    const isLatest = versionName === "latest" || (i === 0 && !versions.includes("latest"));
                     $("#list").append(`
-                        <a href="${dir.name}" class="card ${isLatest ? 'latest' : ''}">
+                        <a href="${isLatest ? 'latest' : versionName}" class="card ${isLatest ? 'latest' : ''}">
                             ${isLatest ? '<span class="badge">Latest</span>' : ''}
-                            <h3>${dir.name}</h3>
+                            <h3>${versionName}</h3>
                         </a>
                     `);
                 }
             }).fail(function() {
-                $("#loading").text("Failed to load versions. Please try again later.");
+                $("#loading").hide();
+                $("#list").append("<p>Failed to load versions. GitHub API rate limit might be exceeded.</p>");
             });
         });
     </script>
