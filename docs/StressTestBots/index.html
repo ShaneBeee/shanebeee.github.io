@@ -125,12 +125,6 @@
                     .map(item => item.name)
                     .sort((a, b) => b.localeCompare(a, undefined, {numeric: true, sensitivity: 'base'}));
 
-                // Add 'latest' to the beginning if it exists in the physical directory
-                const hasLatestDir = data.some(item => item.type === "dir" && item.name === "latest");
-                if (hasLatestDir) {
-                    versions.unshift("latest");
-                }
-
                 $("#loading").hide();
                 if (versions.length === 0) {
                     $("#list").append("<p>No versions found.</p>");
@@ -139,9 +133,9 @@
 
                 for(let i = 0; i < versions.length; i++) {
                     const versionName = versions[i];
-                    const isLatest = versionName === "latest" || (i === 0 && !versions.includes("latest"));
+                    const isLatest = i === 0;
                     $("#list").append(`
-                        <a href="${isLatest ? 'latest' : versionName}" class="card ${isLatest ? 'latest' : ''}">
+                        <a href="${versionName}/" class="card ${isLatest ? 'latest' : ''}">
                             ${isLatest ? '<span class="badge">Latest</span>' : ''}
                             <h3>${versionName}</h3>
                         </a>
