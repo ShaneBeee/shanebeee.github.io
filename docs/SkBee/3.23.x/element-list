@@ -8,6 +8,9 @@ com.shanebeestudios.skbee.api.particle
 com.shanebeestudios.skbee.api.property
 com.shanebeestudios.skbee.api.recipe
 com.shanebeestudios.skbee.api.reflection
+com.shanebeestudios.skbee.api.region
+com.shanebeestudios.skbee.api.region.scheduler
+com.shanebeestudios.skbee.api.region.scheduler.task
 com.shanebeestudios.skbee.api.registry
 com.shanebeestudios.skbee.api.scoreboard
 com.shanebeestudios.skbee.api.skript.base

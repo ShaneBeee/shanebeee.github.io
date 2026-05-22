@@ -62,8 +62,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#getRegistryName()" tabindex="0">getRegistryName()</a></li>
 <li><a href="#getValues()" tabindex="0">getValues()</a></li>
 <li><a href="#getTagValues(io.papermc.paper.registry.tag.TagKey)" tabindex="0">getTagValues(TagKey)</a></li>
-<li><a href="#getValue(io.papermc.paper.registry.TypedKey)" tabindex="0">getValue(TypedKey)</a></li>
 <li><a href="#reverse(T)" tabindex="0">reverse(T)</a></li>
+<li><a href="#getDocString()" tabindex="0">getDocString()</a></li>
 </ol>
 </li>
 </ol>
@@ -86,7 +86,7 @@ loadScripts(document, 'script');</script>
 <div class="horizontal-scroll">
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">RegistryHolder&lt;F extends <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>, T&gt;</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
-<div class="block">Holder class for <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a> elements</div>
+<div class="block">Holder class for registry elements</div>
 </div>
 </section>
 <section class="summary">
@@ -102,35 +102,27 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryKey()" class="member-name-link">getRegistryKey</a>()</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getDocString()" class="member-name-link">getDocString</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryKey()" class="member-name-link">getRegistryKey</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryName()" class="member-name-link">getRegistryName</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReturnType()" class="member-name-link">getReturnType</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&gt;</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagValues(io.papermc.paper.registry.tag.TagKey)" class="member-name-link">getTagValues</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/tag/TagKey.html" title="class or interface in io.papermc.paper.registry.tag" class="external-link">TagKey</a>&lt;<a href="#type-param-F" title="type parameter in RegistryHolder">F</a>&gt;&nbsp;tagKey)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the RegistryKey that belongs to this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRegistryName()" class="member-name-link">getRegistryName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the name of this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a><wbr>&lt;?&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getReturnType()" class="member-name-link">getReturnType</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the type of class returned by this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getTagValues(io.papermc.paper.registry.tag.TagKey)" class="member-name-link">getTagValues</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/tag/TagKey.html" title="class or interface in io.papermc.paper.registry.tag" class="external-link">TagKey</a>&lt;<a href="#type-param-F" title="type parameter in RegistryHolder">F</a>&gt;&nbsp;tagKey)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get all values of a TagKey from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type-param-T" title="type parameter in RegistryHolder">T</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue(io.papermc.paper.registry.TypedKey)" class="member-name-link">getValue</a><wbr>(<a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/TypedKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">TypedKey</a>&lt;<a href="#type-param-F" title="type parameter in RegistryHolder">F</a>&gt;&nbsp;typedKey)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get the value of a TypedKey from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
+<div class="block">Get all values of a TagKey</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a><wbr>&lt;<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&gt;</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValues()" class="member-name-link">getValues</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Get all values from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
+<div class="block">Get all values from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a></div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#type-param-F" title="type parameter in RegistryHolder">F</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#reverse(T)" class="member-name-link">reverse</a><wbr>(<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&nbsp;value)</code></div>
@@ -159,11 +151,6 @@ loadScripts(document, 'script');</script>
 <h3>getRegistryKey</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/RegistryKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">RegistryKey</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getRegistryKey</span>()</div>
-<div class="block">Get the RegistryKey that belongs to this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>RegistryKey</dd>
-</dl>
 </div>
 </section>
 </li>
@@ -172,11 +159,6 @@ loadScripts(document, 'script');</script>
 <h3>getReturnType</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/Class.html" title="class or interface in java.lang" class="external-link">Class</a>&lt;?&gt;</span>&nbsp;<span class="element-name">getReturnType</span>()</div>
-<div class="block">Get the type of class returned by this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>Class type</dd>
-</dl>
 </div>
 </section>
 </li>
@@ -185,11 +167,6 @@ loadScripts(document, 'script');</script>
 <h3>getRegistryName</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getRegistryName</span>()</div>
-<div class="block">Get the name of this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>Registry name</dd>
-</dl>
 </div>
 </section>
 </li>
@@ -198,7 +175,7 @@ loadScripts(document, 'script');</script>
 <h3>getValues</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&gt;</span>&nbsp;<span class="element-name">getValues</span>()</div>
-<div class="block">Get all values from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.
+<div class="block">Get all values from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>
 <p>May be converted</p></div>
 <dl class="notes">
 <dt>Returns:</dt>
@@ -212,28 +189,12 @@ loadScripts(document, 'script');</script>
 <h3>getTagValues</h3>
 <div class="horizontal-scroll">
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/util/List.html" title="class or interface in java.util" class="external-link">List</a>&lt;<a href="#type-param-T" title="type parameter in RegistryHolder">T</a>&gt;</span>&nbsp;<span class="element-name">getTagValues</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/tag/TagKey.html" title="class or interface in io.papermc.paper.registry.tag" class="external-link">TagKey</a>&lt;<a href="#type-param-F" title="type parameter in RegistryHolder">F</a>&gt;&nbsp;tagKey)</span></div>
-<div class="block">Get all values of a TagKey from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
+<div class="block">Get all values of a TagKey</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>tagKey</code> - TagKey to get values from</dd>
 <dt>Returns:</dt>
 <dd>Values from tagkey</dd>
-</dl>
-</div>
-</section>
-</li>
-<li>
-<section class="detail" id="getValue(io.papermc.paper.registry.TypedKey)">
-<h3>getValue</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="annotations"><a href="https://javadoc.io/doc/org.jetbrains/annotations/latest/org/jetbrains/annotations/Nullable.html" title="class or interface in org.jetbrains.annotations" class="external-link">@Nullable</a>
-</span><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="#type-param-T" title="type parameter in RegistryHolder">T</a></span>&nbsp;<span class="element-name">getValue</span><wbr><span class="parameters">(<a href="https://jd.papermc.io/paper/26.1.2/io/papermc/paper/registry/TypedKey.html" title="class or interface in io.papermc.paper.registry" class="external-link">TypedKey</a>&lt;<a href="#type-param-F" title="type parameter in RegistryHolder">F</a>&gt;&nbsp;typedKey)</span></div>
-<div class="block">Get the value of a TypedKey from this <a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Registry.html" title="class or interface in org.bukkit" class="external-link"><code>Registry</code></a>.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>typedKey</code> - TypedKey to get value from</dd>
-<dt>Returns:</dt>
-<dd>Value from registry</dd>
 </dl>
 </div>
 </section>
@@ -251,6 +212,14 @@ loadScripts(document, 'script');</script>
 <dt>Returns:</dt>
 <dd>Original value from registry</dd>
 </dl>
+</div>
+</section>
+</li>
+<li>
+<section class="detail" id="getDocString()">
+<h3>getDocString</h3>
+<div class="horizontal-scroll">
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getDocString</span>()</div>
 </div>
 </section>
 </li>

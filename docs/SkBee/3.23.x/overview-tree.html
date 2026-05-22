@@ -62,6 +62,9 @@ loadScripts(document, 'script');</script>
 <li><a href="com/shanebeestudios/skbee/api/property/package-tree.html">com.shanebeestudios.skbee.api.property</a>, </li>
 <li><a href="com/shanebeestudios/skbee/api/recipe/package-tree.html">com.shanebeestudios.skbee.api.recipe</a>, </li>
 <li><a href="com/shanebeestudios/skbee/api/reflection/package-tree.html">com.shanebeestudios.skbee.api.reflection</a>, </li>
+<li><a href="com/shanebeestudios/skbee/api/region/package-tree.html">com.shanebeestudios.skbee.api.region</a>, </li>
+<li><a href="com/shanebeestudios/skbee/api/region/scheduler/package-tree.html">com.shanebeestudios.skbee.api.region.scheduler</a>, </li>
+<li><a href="com/shanebeestudios/skbee/api/region/scheduler/task/package-tree.html">com.shanebeestudios.skbee.api.region.scheduler.task</a>, </li>
 <li><a href="com/shanebeestudios/skbee/api/registry/package-tree.html">com.shanebeestudios.skbee.api.registry</a>, </li>
 <li><a href="com/shanebeestudios/skbee/api/scoreboard/package-tree.html">com.shanebeestudios.skbee.api.scoreboard</a>, </li>
 <li><a href="com/shanebeestudios/skbee/api/skript/base/package-tree.html">com.shanebeestudios.skbee.api.skript.base</a>, </li>
@@ -119,6 +122,8 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.shanebeestudios.skbee.api.fastboard.<a href="com/shanebeestudios/skbee/api/fastboard/FastBoardManager.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.fastboard">FastBoardManager</a> (implements org.bukkit.event.<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/event/Listener.html" title="class or interface in org.bukkit.event" class="external-link">Listener</a>)</li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.<a href="com/shanebeestudios/skbee/api/region/scheduler/FoliaScheduler.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region.scheduler">FoliaScheduler</a> (implements com.shanebeestudios.skbee.api.region.scheduler.<a href="com/shanebeestudios/skbee/api/region/scheduler/Scheduler.html" title="interface in com.shanebeestudios.skbee.api.region.scheduler">Scheduler</a>&lt;T&gt;)</li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.task.<a href="com/shanebeestudios/skbee/api/region/scheduler/task/FoliaTask.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region.scheduler.task">FoliaTask</a> (implements com.shanebeestudios.skbee.api.region.scheduler.task.<a href="com/shanebeestudios/skbee/api/region/scheduler/task/Task.html" title="interface in com.shanebeestudios.skbee.api.region.scheduler.task">Task</a>&lt;T&gt;)</li>
 <li class="circle">com.shanebeestudios.skbee.api.util.<a href="com/shanebeestudios/skbee/api/util/ItemComponentUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util">ItemComponentUtils</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.util.<a href="com/shanebeestudios/skbee/api/util/ItemUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util">ItemUtils</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.registry.<a href="com/shanebeestudios/skbee/api/registry/KeyUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.registry">KeyUtils</a></li>
@@ -186,6 +191,7 @@ loadScripts(document, 'script');</script>
 <li class="circle">com.shanebeestudios.skbee.api.property.<a href="com/shanebeestudios/skbee/api/property/PropertyRegistry.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.property">PropertyRegistry</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.recipe.<a href="com/shanebeestudios/skbee/api/recipe/RecipeUtil.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.recipe">RecipeUtil</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.reflection.<a href="com/shanebeestudios/skbee/api/reflection/ReflectionUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.reflection">ReflectionUtils</a></li>
+<li class="circle">com.shanebeestudios.skbee.api.region.<a href="com/shanebeestudios/skbee/api/region/RegionUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region">RegionUtils</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.registry.<a href="com/shanebeestudios/skbee/api/registry/RegistryHolder.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.registry">RegistryHolder</a>&lt;F,<wbr>T&gt;</li>
 <li class="circle">com.shanebeestudios.skbee.api.registry.<a href="com/shanebeestudios/skbee/api/registry/RegistryHolders.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.registry">RegistryHolders</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.registry.<a href="com/shanebeestudios/skbee/api/registry/RegistryUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.registry">RegistryUtils</a></li>
@@ -206,8 +212,11 @@ loadScripts(document, 'script');</script>
 </ul>
 </li>
 <li class="circle">com.shanebeestudios.skbee.api.util.<a href="com/shanebeestudios/skbee/api/util/SkriptUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util">SkriptUtils</a></li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.<a href="com/shanebeestudios/skbee/api/region/scheduler/SpigotScheduler.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region.scheduler">SpigotScheduler</a> (implements com.shanebeestudios.skbee.api.region.scheduler.<a href="com/shanebeestudios/skbee/api/region/scheduler/Scheduler.html" title="interface in com.shanebeestudios.skbee.api.region.scheduler">Scheduler</a>&lt;T&gt;)</li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.task.<a href="com/shanebeestudios/skbee/api/region/scheduler/task/SpigotTask.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region.scheduler.task">SpigotTask</a> (implements com.shanebeestudios.skbee.api.region.scheduler.task.<a href="com/shanebeestudios/skbee/api/region/scheduler/task/Task.html" title="interface in com.shanebeestudios.skbee.api.region.scheduler.task">Task</a>&lt;T&gt;)</li>
 <li class="circle">com.shanebeestudios.skbee.api.structure.<a href="com/shanebeestudios/skbee/api/structure/StructureManager.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.structure">StructureManager</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.structure.<a href="com/shanebeestudios/skbee/api/structure/StructureWrapper.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.structure">StructureWrapper</a> (implements org.bukkit.<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/Keyed.html" title="class or interface in org.bukkit" class="external-link">Keyed</a>)</li>
+<li class="circle">com.shanebeestudios.skbee.api.region.<a href="com/shanebeestudios/skbee/api/region/TaskUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.region">TaskUtils</a></li>
 <li class="circle">com.shanebeestudios.skbee.api.scoreboard.<a href="com/shanebeestudios/skbee/api/scoreboard/TeamUtils.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.scoreboard">TeamUtils</a></li>
 <li class="circle">ch.njol.skript.lang.<a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/TriggerItem.html" class="type-name-link external-link" title="class or interface in ch.njol.skript.lang">TriggerItem</a> (implements ch.njol.skript.lang.<a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/lang/Debuggable.html" title="class or interface in ch.njol.skript.lang" class="external-link">Debuggable</a>)
 <ul>
@@ -248,7 +257,6 @@ loadScripts(document, 'script');</script>
 </li>
 <li class="circle">com.shanebeestudios.skbee.api.util.update.<a href="com/shanebeestudios/skbee/api/util/update/UpdateChecker.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util.update">UpdateChecker</a> (implements org.bukkit.event.<a href="https://jd.papermc.io/paper/26.1.2/org/bukkit/event/Listener.html" title="class or interface in org.bukkit.event" class="external-link">Listener</a>)</li>
 <li class="circle">com.shanebeestudios.skbee.api.util.<a href="com/shanebeestudios/skbee/api/util/Util.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util">Util</a></li>
-<li class="circle">com.shanebeestudios.skbee.api.util.<a href="com/shanebeestudios/skbee/api/util/WeightedList.html" class="type-name-link" title="class in com.shanebeestudios.skbee.api.util">WeightedList</a>&lt;T&gt;</li>
 </ul>
 </li>
 </ul>
@@ -266,6 +274,8 @@ loadScripts(document, 'script');</script>
 </li>
 </ul>
 </li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.<a href="com/shanebeestudios/skbee/api/region/scheduler/Scheduler.html" class="type-name-link" title="interface in com.shanebeestudios.skbee.api.region.scheduler">Scheduler</a>&lt;T&gt;</li>
+<li class="circle">com.shanebeestudios.skbee.api.region.scheduler.task.<a href="com/shanebeestudios/skbee/api/region/scheduler/task/Task.html" class="type-name-link" title="interface in com.shanebeestudios.skbee.api.region.scheduler.task">Task</a>&lt;T&gt;</li>
 </ul>
 </section>
 <section class="hierarchy">
