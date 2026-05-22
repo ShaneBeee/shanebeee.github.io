@@ -194,7 +194,7 @@
         <div class="pong-close" onclick="togglePong()">&times;</div>
         <h3 style="color: var(--primary); margin: 0 0 10px 0; font-family: 'Courier New', Courier, monospace;">Pong - Inspired by itsSparky200</h3>
         <canvas id="pong-canvas" width="600" height="400"></canvas>
-        <p style="font-family: monospace; color: var(--primary); font-size: 0.8rem; margin-top: 5px;">Use Up/Down Arrows or W/S to move</p>
+        <p style="font-family: monospace; color: var(--primary); font-size: 0.8rem; margin-top: 5px;">Use Up/Down Arrows, W/S or Scroll Wheel to move</p>
     </div>
 
     <script>
@@ -217,6 +217,9 @@
         let downPressed = false;
 
         document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && gameRunning) {
+                togglePong();
+            }
             if (e.key === 'ArrowUp' || e.key === 'w') {
                 upPressed = true;
                 if (gameRunning) e.preventDefault();
@@ -230,6 +233,16 @@
             if (e.key === 'ArrowUp' || e.key === 'w') upPressed = false;
             if (e.key === 'ArrowDown' || e.key === 's') downPressed = false;
         });
+
+        canvas.addEventListener('wheel', (e) => {
+            if (gameRunning) {
+                e.preventDefault();
+                fuckYouJavaPlayer.y += e.deltaY;
+                // Keep paddle in bounds
+                if (fuckYouJavaPlayer.y < 0) fuckYouJavaPlayer.y = 0;
+                if (fuckYouJavaPlayer.y > canvas.height - paddleHeight) fuckYouJavaPlayer.y = canvas.height - paddleHeight;
+            }
+        }, { passive: false });
 
         function togglePong() {
             gameRunning = !gameRunning;
