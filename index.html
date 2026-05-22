@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShaneBee</title>
+    <style>
+        :root {
+            --primary: #f39c12;
+            --bg: #1a1a1a;
+            --text: #ecf0f1;
+            --card-bg: #2c3e50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 800px;
+            text-align: center;
+            padding: 2rem;
+        }
+        h1 {
+            color: var(--primary);
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+        p.subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+        .section {
+            margin-bottom: 3rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 600px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            border-bottom: 4px solid transparent;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border-bottom: 4px solid var(--primary);
+        }
+        .card h3 {
+            margin: 0;
+            color: var(--primary);
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            opacity: 0.5;
+        }
+        a.btn {
+            display: inline-block;
+            background: var(--primary);
+            color: #000;
+            padding: 0.8rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: opacity 0.3s;
+        }
+        a.btn:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="section">
+            <h1>ShaneBee</h1>
+            <p class="subtitle">Welcome to my stunning looking website!</p>
+        </header>
+
+        <section class="section">
+            <h2>Repos</h2>
+            <p>Check out my collection of repos:</p>
+            <div class="grid">
+                <a href="https://github.com/ShaneBeee" class="card" target="_blank">
+                    <h3>ShaneBeee</h3>
+                    <p>Main GitHub Profile</p>
+                </a>
+                <a href="https://github.com/ShaneBeeStudios" class="card" target="_blank">
+                    <h3>ShaneBeeStudios</h3>
+                    <p>Development Studio</p>
+                </a>
+                <a href="https://github.com/SkriptDev/" class="card" target="_blank">
+                    <h3>SkriptDev</h3>
+                    <p>Skript Related Projects</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>JavaDocs</h2>
+            <p>A collection of JavaDocs for different resources:</p>
+            <a href="./docs/" class="btn">View JavaDocs</a>
+        </section>
+
+        <footer class="footer">
+            &copy; 2026 ShaneBee
+        </footer>
+    </div>
+</body>
+</html>
