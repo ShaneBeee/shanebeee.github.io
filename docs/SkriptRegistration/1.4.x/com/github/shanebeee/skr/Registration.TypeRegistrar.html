@@ -63,9 +63,8 @@ loadScripts(document, 'script');</script>
 <li><a href="#before(java.lang.String...)" tabindex="0">before(String...)</a></li>
 <li><a href="#usage(java.lang.String)" tabindex="0">usage(String)</a></li>
 <li><a href="#defaultExpression(ch.njol.skript.lang.DefaultExpression)" tabindex="0">defaultExpression(DefaultExpression)</a></li>
-<li><a href="#parser(ch.njol.skript.classes.Parser)" tabindex="0">parser(Parser)</a></li>
 <li><a href="#supplier(java.util.function.Supplier)" tabindex="0">supplier(Supplier)</a></li>
-<li><a href="#usageFromSupplier()" tabindex="0">usageFromSupplier()</a></li>
+<li><a href="#parser(ch.njol.skript.classes.Parser)" tabindex="0">parser(Parser)</a></li>
 <li><a href="#serializer(ch.njol.skript.classes.Serializer)" tabindex="0">serializer(Serializer)</a></li>
 <li><a href="#cloner(ch.njol.skript.classes.Cloner)" tabindex="0">cloner(Cloner)</a></li>
 <li><a href="#changer(ch.njol.skript.classes.Changer)" tabindex="0">changer(Changer)</a></li>
@@ -158,13 +157,8 @@ loadScripts(document, 'script');</script>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#usage(java.lang.String)" class="member-name-link">usage</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;usage)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#usageFromSupplier()" class="member-name-link">usageFromSupplier</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Automatically generates usage strings from a supplier and parser.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a><wbr>&lt;<a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#user(java.lang.String...)" class="member-name-link">user</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;user)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#user(java.lang.String...)" class="member-name-link">user</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/25/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>...&nbsp;user)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
 </div>
 </div>
 </div>
@@ -226,14 +220,6 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="parser(ch.njol.skript.classes.Parser)">
-<h3>parser</h3>
-<div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a>&lt;<a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;</span>&nbsp;<span class="element-name">parser</span><wbr><span class="parameters">(<a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/Parser.html" title="class or interface in ch.njol.skript.classes" class="external-link">Parser</a>&lt;? extends <a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;&nbsp;parser)</span></div>
-</div>
-</section>
-</li>
-<li>
 <section class="detail" id="supplier(java.util.function.Supplier)">
 <h3>supplier</h3>
 <div class="horizontal-scroll">
@@ -242,18 +228,10 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="usageFromSupplier()">
-<h3>usageFromSupplier</h3>
+<section class="detail" id="parser(ch.njol.skript.classes.Parser)">
+<h3>parser</h3>
 <div class="horizontal-scroll">
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a>&lt;<a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;</span>&nbsp;<span class="element-name">usageFromSupplier</span>()</div>
-<div class="block">Automatically generates usage strings from a supplier and parser.
-<p>
-Do note this is required to be put AFTER parser/supplier.
-</p></div>
-<dl class="notes">
-<dt>Returns:</dt>
-<dd>This registrar for chaining.</dd>
-</dl>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Registration.TypeRegistrar.html" title="class in com.github.shanebeee.skr">Registration.TypeRegistrar</a>&lt;<a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;</span>&nbsp;<span class="element-name">parser</span><wbr><span class="parameters">(<a href="https://docs.skriptlang.org/javadocs/ch/njol/skript/classes/Parser.html" title="class or interface in ch.njol.skript.classes" class="external-link">Parser</a>&lt;? extends <a href="#type-param-T" title="type parameter in Registration.TypeRegistrar">T</a>&gt;&nbsp;parser)</span></div>
 </div>
 </section>
 </li>
