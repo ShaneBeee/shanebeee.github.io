@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconciled — Dev Notes</title>
+    <link rel="icon" type="image/png" href="assets/reconciled-favicon-32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="./" class="brand">
+            <img src="assets/reconciled-logo-256.png" alt="Reconciled logo">
+            <span>Reconciled</span>
+        </a>
+        <nav>
+            <a href="./">Overview</a>
+            <a href="usage.html">Usage Guide</a>
+            <a href="dev-notes.html" class="active">Dev Notes</a>
+            <a href="https://github.com/ShaneBeee/Reconciled" target="_blank">GitHub ↗</a>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <header class="hero" style="padding-top: 1rem;">
+            <h1>Dev Notes</h1>
+            <p class="subtitle">Architecture, data model, and assorted notes for anyone (mostly future me) poking around the code.</p>
+        </header>
+
+        <section class="section">
+            <h2>Tech Stack</h2>
+            <table>
+                <tr><th>Layer</th><th>Technology</th></tr>
+                <tr><td>Language</td><td>Java 25</td></tr>
+                <tr><td>UI</td><td>Swing + <a href="https://www.formdev.com/flatlaf/" target="_blank">FlatLaf 3.5.4</a></td></tr>
+                <tr><td>Build</td><td>Gradle (Kotlin DSL)</td></tr>
+                <tr><td>Serialization</td><td><a href="https://github.com/google/gson" target="_blank">Gson 2.11.0</a> — plain JSON on disk, no database</td></tr>
+                <tr><td>PDF Generation</td><td><a href="https://itextpdf.com/" target="_blank">iText 8</a></td></tr>
+                <tr><td>Excel Export</td><td>Python 3 + openpyxl, auto-installed into a local venv on first export</td></tr>
+                <tr><td>Packaging</td><td>jpackage — macOS DMG and Windows EXE, each built on its own platform (no cross-compiling installers)</td></tr>
+            </table>
+        </section>
+
+        <section class="section">
+            <h2>Package Structure</h2>
+            <p>Everything lives under <code>com.github.shanebeee.reconciled</code>:</p>
+            <pre><code>reconciled/
+├── Main.java          # Entry point, onboarding gate, profile resolution
+├── model/             # Plain data classes (Boss, Invoice, CcaAsset, etc.)
+├── storage/            # DataStorage (Preferences + paths), ProfileManager
+├── util/               # Exporters, PDF/Excel generation, deduction math
+└── view/               # Swing panels — one per major feature area</code></pre>
+        </section>
+
+        <section class="section">
+            <h2>Data Storage</h2>
+            <p>
+                No database — everything is plain JSON on disk, which means it's human-readable,
+                diffable, and trivially portable. If it's stored in iCloud Drive, sync is free.
+            </p>
+            <pre><code>Reconciled/
+├── profiles.json            # id, name, dataPath, avatarColor per profile
+├── Shane_Bolenback/          # one named subfolder per user profile
+│   ├── settings/
+│   │   ├── employee.json
+│   │   ├── bosses.json
+│   │   ├── settings.json
+│   │   ├── expense_categories_{year}.json
+│   │   ├── tax_brackets_{year}.json
+│   │   └── cca_assets.json
+│   ├── logs/yyyy-MM.json
+│   ├── invoices/{invoice_log.json, *.pdf}
+│   ├── receipts/{year}/{month}/
+│   └── km/{year}/{trips.json, odometer.json}
+└── Jenny_Francisco/           # completely independent from the above
+    └── ...</code></pre>
+            <p>
+                The root directory itself defaults to <code>~/Library/Mobile Documents/com~apple~CloudDocs/Reconciled/</code>
+                on iCloud, or <code>~/Reconciled/</code> locally, but is fully overridable during onboarding.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Preferences &amp; Root Directory Resolution</h2>
+            <p>
+                The saved data path lives in macOS Preferences, under the node derived from
+                <code>com.github.shanebeee.reconciled.storage</code> (backed by
+                <code>~/Library/Preferences/com.github.shanebeee.plist</code> when running as a
+                packaged jpackage app — a plain <code>./gradlew run</code> JVM instead falls under the
+                generic <code>com.apple.java.util.prefs.plist</code>, which is worth knowing if you ever
+                go looking for it in the wrong plist, like I did).
+            </p>
+            <p>
+                <code>ProfileManager.getRootDir()</code> is the single source of truth for where
+                <code>profiles.json</code> lives. It checks, in order: an explicitly saved
+                <code>rootDirectory</code> preference, then a legacy fallback to the saved data
+                directory, then a hardcoded default. Once a root directory is saved, it's used
+                permanently — <code>Main.java</code> never re-derives it from scratch on a later launch.
+            </p>
+            <div class="callout blue">
+                <p>
+                    <strong>Why that last point matters:</strong> an earlier version of <code>Main.java</code>
+                    re-derived the root directory on <em>every</em> launch by string-matching the app's
+                    folder name inside the current data path, then truncating there. It worked fine —
+                    until a rename made that string match fail once. The fallback for a failed match was
+                    "just use the current (possibly deep) data path as the root," which meant the very next
+                    launch nested a new profile folder <em>inside</em> that path, then the launch after that
+                    nested another one inside <em>that</em> — compounding one level deeper every single
+                    time the app opened, with no error and no obvious symptom beyond "why do I have a
+                    profile called Me/Me/Me/Me/Me/Me/Me/Me now." Storing the resolved root once and
+                    trusting it thereafter fixed it for good.
+                </p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>CCA / Depreciation Math</h2>
+            <p>
+                <code>CcaAsset</code> is a pure computed model — there's no mutable running balance
+                for Undepreciated Capital Cost (UCC). Opening UCC, the year's deduction, and Closing
+                UCC are all derived mathematically from the asset's original cost, purchase date,
+                and CRA class rate, for any requested tax year. That makes it trivial to preview a
+                future or past year without needing to replay history.
+            </p>
+            <p>CRA's half-year rule, as implemented:</p>
+            <ul>
+                <li>Year of purchase: <code>deduction = cost × rate × 0.5</code></li>
+                <li>Every year after: <code>deduction = openingUCC × rate</code>, where openingUCC compounds the prior year's closing balance</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Tax Set-Aside Calculation</h2>
+            <p>
+                Triggered when an invoice is marked Paid. Reconciled takes your year-to-date paid
+                invoices, annualizes that figure (extrapolates a full-year estimate from what's been
+                earned so far), and runs it against your configured federal and BC tax brackets plus
+                CPP settings to estimate what to set aside for GST, federal tax, provincial tax, and CPP.
+                Brackets are stored per tax year in <code>tax_brackets_{year}.json</code>, so historical
+                years stay accurate even as rates change — deliberately kept as manual configuration
+                rather than scraped from anywhere, since CRA rates are only published once a year anyway.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Naming History</h2>
+            <p>
+                Reconciled was originally called <strong>EmployeeTimesheet</strong>, built purely to
+                log hours and generate invoices. As expense tracking, CCA depreciation, tax
+                set-asides, and multi-user profiles were added, it grew into a genuine bookkeeping
+                suite — at which point the old name stopped fitting, and it was renamed to
+                <strong>Reconciled</strong> to match what it had actually become.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Building</h2>
+            <pre><code># Run in development
+./gradlew run
+
+# Build fat JAR
+./gradlew jar
+
+# Package as macOS DMG (must be run on macOS)
+./gradlew jpackageMac
+
+# Package as Windows EXE installer (must be run on Windows)
+./gradlew jpackageWindows</code></pre>
+            <p>
+                jpackage can't cross-compile installers for another OS, so each packaging task has
+                to run on that same platform. <code>jpackageWindows</code> defaults to an <code>.exe</code>
+                to avoid requiring the WiX Toolset — switch to <code>--type msi</code> in
+                <code>build.gradle.kts</code> if WiX is available and an <code>.msi</code> is preferred.
+                Requires Java 25+.
+            </p>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 ShaneBee &nbsp;·&nbsp; <a href="./">← Back to Reconciled Overview</a> &nbsp;·&nbsp; <a href="../">Home</a>
+        </div>
+
+    </div>
+
+</body>
+</html>

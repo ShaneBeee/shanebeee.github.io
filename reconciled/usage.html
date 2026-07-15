@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconciled — Usage Guide</title>
+    <link rel="icon" type="image/png" href="assets/reconciled-favicon-32.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="topnav">
+        <a href="./" class="brand">
+            <img src="assets/reconciled-logo-256.png" alt="Reconciled logo">
+            <span>Reconciled</span>
+        </a>
+        <nav>
+            <a href="./">Overview</a>
+            <a href="usage.html" class="active">Usage Guide</a>
+            <a href="dev-notes.html">Dev Notes</a>
+            <a href="https://github.com/ShaneBeee/Reconciled" target="_blank">GitHub ↗</a>
+        </nav>
+    </div>
+
+    <div class="container">
+
+        <header class="hero" style="padding-top: 1rem;">
+            <h1>Usage Guide</h1>
+            <p class="subtitle">Everything you need to actually use Reconciled day-to-day.</p>
+        </header>
+
+        <section class="section">
+            <h2>First-Run Onboarding</h2>
+            <p>The first time you launch Reconciled, a 7-step wizard walks you through setup. It only appears once — after that, the app goes straight to your data.</p>
+            <ol class="steps">
+                <li><strong>Welcome</strong> — a quick introduction screen.</li>
+                <li><strong>Data Location</strong> — choose iCloud Drive (recommended — it's auto-detected and keeps your data synced across Macs) or Local Only. A custom folder works too.</li>
+                <li><strong>Profile</strong> — your name, company, address, phone, and email. This shows up on your invoices.</li>
+                <li><strong>Home Office</strong> — optional. Enter your office square footage and total home square footage, and Reconciled works out your deductible percentage automatically.</li>
+                <li><strong>CCA Assets</strong> — optional. Add any capital assets you already own (laptop, vehicle, etc.). You can skip this and add assets later.</li>
+                <li><strong>First Boss</strong> — add your first client, with hourly rate, KM rate, and income type.</li>
+                <li><strong>Done</strong> — a summary of where your data will be saved.</li>
+            </ol>
+            <div class="callout">
+                <p>Every step except Profile and First Boss can be skipped and revisited later from Settings.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>🏠 Dashboard</h2>
+            <p>Your landing screen — a snapshot of where things stand.</p>
+            <ul>
+                <li><strong>This Month</strong> — gross income, hours logged, expenses, KMs driven, and KMs billed. Each card links straight to the relevant panel.</li>
+                <li><strong>Year to Date</strong> — gross income, total expenses, and estimated net income.</li>
+                <li><strong>Year over Year</strong> — compares this month to the same month last year, with colour-coded up/down indicators. Only shows once you have a year of history.</li>
+                <li><strong>Outstanding Invoices</strong> — anything marked Sent but not yet Paid, with a one-click Mark Paid button.</li>
+                <li><strong>Recent Activity</strong> — your last six actions across work logs, expenses, and KM trips.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>📅 Work Logs</h2>
+            <p>A calendar-based monthly view for logging your work. Each day can have three kinds of entries:</p>
+            <ul>
+                <li><strong>Time</strong> — start/end time, with sliders to split the hours across multiple bosses if needed (there's a "Split Evenly" button for convenience). Add notes if you like.</li>
+                <li><strong>Kilometre</strong> — distance billed to a specific boss. This automatically syncs to your Kilometre Log.</li>
+                <li><strong>Extra</strong> — anything else billable, tracked by units and cost per unit.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>🧾 Invoice Management</h2>
+            <h3>Generating an invoice</h3>
+            <p>
+                Pick a boss and a date range, then generate either a <strong>Standard</strong> invoice
+                or a <strong>With Breakdown</strong> version — a two-page PDF where the second page
+                gives your client a detailed work log for their records. You can preview before
+                generating, and there's a monthly summary preview with a little vibe-check emoji
+                depending on how the month went (🤑 / 😊 / 😐 / 😬).
+            </p>
+            <h3>Tracking invoices</h3>
+            <p>
+                Every invoice you generate is logged with a status: <strong>Draft</strong>, <strong>Sent</strong>,
+                or <strong>Paid</strong>. From the History tab you can mark invoices as sent or paid,
+                email them directly (opens Mail.app with the PDF attached — just make sure the boss
+                has an email address saved), or delete a record if needed (the PDF itself stays on disk).
+            </p>
+            <div class="callout">
+                <p><strong>Tax set-aside</strong> — when you mark an invoice Paid, Reconciled automatically
+                shows you how much to set aside for GST, federal tax, BC provincial tax, and CPP,
+                based on your year-to-date paid invoices annualized against your configured tax brackets.
+                It also shows the annualized income estimate it used, so you can sanity-check the numbers.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>💸 Expenses &amp; CCA Assets</h2>
+            <h3>Expenses</h3>
+            <p>
+                A month grid gives you all 12 months at a glance with colour-coded category totals —
+                click into any month for the detail view. Each expense tracks subtotal, GST (auto-calculated,
+                overridable), and total after tax, plus attachments for receipts (JPG, PNG, PDF, or HEIC —
+                drag and drop or use the file picker).
+            </p>
+            <p>
+                Categories follow CRA's T2125 form out of the box (advertising, meals, insurance, office
+                expenses, and so on), and each one can be set to a different business-use rule:
+            </p>
+            <table>
+                <tr><th>Type</th><th>How it works</th></tr>
+                <tr><td>Full</td><td>100% deductible — the default</td></tr>
+                <tr><td>Fixed %</td><td>A fixed business-use percentage you set (e.g. 60% for your phone)</td></tr>
+                <tr><td>KM-based</td><td>Calculated automatically from your Kilometre Log — used for vehicle expenses</td></tr>
+                <tr><td>Home Office</td><td>Calculated from the office/home square footage you set in Settings</td></tr>
+            </table>
+            <p>You can also save frequent expenses as templates for one-click re-entry.</p>
+
+            <h3>CCA Assets</h3>
+            <p>
+                For bigger purchases — laptops, vehicles, equipment — Reconciled tracks Capital Cost
+                Allowance depreciation using CRA's half-year rule. Everything is calculated automatically
+                from the purchase date and cost, so there's no running balance to manage by hand. Common
+                CRA classes (Class 50 for computers, Class 10 for vehicles, and so on) are pre-loaded with
+                their correct rates, or you can set a custom class.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>🚗 Kilometre Log</h2>
+            <p>
+                A chronological log of your business trips, grouped by month with running totals.
+                Set your year-start and year-end odometer readings and Reconciled works out your
+                business-use percentage automatically — which feeds directly into vehicle expense
+                deductions. Any KM entries logged through Work Logs show up here automatically
+                (tagged "auto-logged"), and if you've been tracking KMs there without realizing it
+                syncs, there's an "Import from Work Logs" button that backfills everything safely
+                (it won't create duplicates, even if you run it more than once).
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>📊 Accounting Exports</h2>
+            <p>When it's time to hand things off to an accountant, or just archive a year, there are a few export options:</p>
+            <ul>
+                <li><strong>Excel (.xlsx)</strong> — a formatted 4-sheet workbook: Expenses, Kilometre Log, Income Summary, and CCA Schedule.</li>
+                <li><strong>CSV</strong> — a zip with plain-text expense and KM log files.</li>
+                <li><strong>Annual Tax Report (PDF)</strong> — a full multi-page report with income summary, expense breakdown, CCA schedule, KM summary, and a full annual net income summary with GST reconciliation.</li>
+                <li><strong>Receipt Archive</strong> — a zip of every receipt for the year, organized by month.</li>
+                <li><strong>Year Archive</strong> — a complete backup of a year's data, which can be re-imported later (it won't overwrite existing data by accident).</li>
+            </ul>
+            <p>Once a year is safely archived, there's also an option to clear it from local storage — this always requires typing the year to confirm, and is never offered for the current year.</p>
+        </section>
+
+        <section class="section">
+            <h2>👥 Boss Management</h2>
+            <p>
+                Add and manage the clients ("bosses") you work for. Each one is marked as either
+                <strong>Self-Employed (T2125)</strong> or <strong>T4 Employment</strong> — T4 bosses
+                are automatically excluded from your self-employed income calculations and tax report,
+                since that income is handled differently at tax time.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>👤 Multiple Profiles</h2>
+            <p>
+                More than one person can use the same installation, with completely separate books —
+                nothing is shared between profiles. If more than one profile exists, you'll see a
+                profile picker on launch; a <strong>Switch</strong> button in the sidebar lets you swap
+                users mid-session. New profiles can be added from the picker or from Settings → User Profiles.
+            </p>
+        </section>
+
+        <section class="section">
+            <h2>Handy extras</h2>
+            <ul>
+                <li><strong>Search</strong> — the sidebar search bar finds anything across work logs, expenses, and KM trips, with live results you can click straight through to.</li>
+                <li><strong>Undo</strong> — deleting an entry shows an Undo snackbar for 8 seconds before the delete is committed.</li>
+            </ul>
+        </section>
+
+        <div class="footer">
+            &copy; 2026 ShaneBee &nbsp;·&nbsp; <a href="./">← Back to Reconciled Overview</a> &nbsp;·&nbsp; <a href="../">Home</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
